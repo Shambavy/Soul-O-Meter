@@ -1,0 +1,1956 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+<title>Soul·O·Meter</title>
+<meta name="theme-color" content="#e8637a"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="default"/>
+<meta name="apple-mobile-web-app-title" content="Soul·O·Meter"/>
+<link rel="manifest" href="data:application/json;base64,eyJuYW1lIjogIkxvdmUgTG9hZGluZyIsICJzaG9ydF9uYW1lIjogIkxvdmUgTG9hZGluZyIsICJkZXNjcmlwdGlvbiI6ICJBbGlnbiBmaXJzdCwgYXR0YWNoIGxhdGVyIiwgInN0YXJ0X3VybCI6ICIuIiwgImRpc3BsYXkiOiAic3RhbmRhbG9uZSIsICJiYWNrZ3JvdW5kX2NvbG9yIjogIiNmZGUwZjAiLCAidGhlbWVfY29sb3IiOiAiI2U4NjM3YSIsICJpY29ucyI6IFt7InNyYyI6ICJkYXRhOmltYWdlL3N2Zyt4bWw7YmFzZTY0LFBITjJaeUI0Yld4dWN6MGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TUM5emRtY2lJSFpwWlhkQ2IzZzlJakFnTUNBMU1USWdOVEV5SWo0OGNtVmpkQ0IzYVdSMGFEMGlOVEV5SWlCb1pXbG5hSFE5SWpVeE1pSWdjbmc5SWpFeE1DSWdabWxzYkQwaUkyWmtaVEJtTUNJdlBqeHdZWFJvSUdROUlrMHhOVFVnTVRrMUlFTXhOVFVzTVRjeUlERXpNaXd4TmpNZ01USXlMREUzT0NCRE1URXlMREUyTXlBNE9Td3hOeklnT0Rrc01UazFJRU00T1N3eU1qSWdNVEl5TERJME9DQXhNaklzTWpRNElFTXhNaklzTWpRNElERTFOU3d5TWpJZ01UVTFMREU1TlZvaUlHWnBiR3c5SWlObU5HRXdZakFpSUhSeVlXNXpabTl5YlQwaWNtOTBZWFJsS0MweE1DQXhNaklnTWpFMUtTSXZQanh3WVhSb0lHUTlJazAwTWpNZ01UazFJRU0wTWpNc01UY3lJRFF3TUN3eE5qTWdNemt3TERFM09DQkRNemd3TERFMk15QXpOVGNzTVRjeUlETTFOeXd4T1RVZ1F6TTFOeXd5TWpJZ016a3dMREkwT0NBek9UQXNNalE0SUVNek9UQXNNalE0SURReU15d3lNaklnTkRJekxERTVOVm9pSUdacGJHdzlJaU5tTkdFd1lqQWlJSFJ5WVc1elptOXliVDBpY205MFlYUmxLREV3SURNNU1DQXlNVFVwSWk4K1BIQmhkR2dnWkQwaVRUTXpNQ0F5TWpBZ1F6TXpNQ3d4T1RBZ01qazFMREUzT0NBeU5UWXNNakExSUVNeU1UY3NNVGM0SURFNE1pd3hPVEFnTVRneUxESXlNQ0JETVRneUxESTJNaUF5TlRZc016RXdJREkxTml3ek1UQWdRekkxTml3ek1UQWdNek13TERJMk1pQXpNekFzTWpJd1dpSWdabWxzYkQwaWRYSnNLQ050WnlraUx6NDhZMmx5WTJ4bElHTjRQU0l5TlRZaUlHTjVQU0l6TXpnaUlISTlJakV3SWlCbWFXeHNQU0lqWm1aa056QXdJaUJ2Y0dGamFYUjVQU0l3TGpraUx6NDhZMmx5WTJ4bElHTjRQU0l4TlRBaUlHTjVQU0l4TmpZaUlISTlJamNpSUdacGJHdzlJaU5tT1dRd1pHSWlJRzl3WVdOcGRIazlJakF1T0NJdlBqeGphWEpqYkdVZ1kzZzlJak0yTWlJZ1kzazlJakUyTmlJZ2NqMGlOeUlnWm1sc2JEMGlJMlEwTnpnNVlTSWdiM0JoWTJsMGVUMGlNQzQ0SWk4K1BHUmxabk0rUEd4cGJtVmhja2R5WVdScFpXNTBJR2xrUFNKdFp5SWdlREU5SWpBaUlIa3hQU0l3SWlCNE1qMGlNQ0lnZVRJOUlqRWlQanh6ZEc5d0lHOW1abk5sZEQwaU1DVWlJSE4wYjNBdFkyOXNiM0k5SWlObE9EWXpOMkVpTHo0OGMzUnZjQ0J2Wm1aelpYUTlJakV3TUNVaUlITjBiM0F0WTI5c2IzSTlJaU5qT1RRd05qQWlMejQ4TDJ4cGJtVmhja2R5WVdScFpXNTBQand2WkdWbWN6NDhMM04yWno0PSIsICJzaXplcyI6ICI1MTJ4NTEyIiwgInR5cGUiOiAiaW1hZ2Uvc3ZnK3htbCIsICJwdXJwb3NlIjogImFueSBtYXNrYWJsZSJ9XX0="/>
+<link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cmVjdCB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgcng9IjExMCIgZmlsbD0iI2ZkZTBmMCIvPjxwYXRoIGQ9Ik0xNTUgMTk1IEMxNTUsMTcyIDEzMiwxNjMgMTIyLDE3OCBDMTEyLDE2MyA4OSwxNzIgODksMTk1IEM4OSwyMjIgMTIyLDI0OCAxMjIsMjQ4IEMxMjIsMjQ4IDE1NSwyMjIgMTU1LDE5NVoiIGZpbGw9IiNmNGEwYjAiIHRyYW5zZm9ybT0icm90YXRlKC0xMCAxMjIgMjE1KSIvPjxwYXRoIGQ9Ik00MjMgMTk1IEM0MjMsMTcyIDQwMCwxNjMgMzkwLDE3OCBDMzgwLDE2MyAzNTcsMTcyIDM1NywxOTUgQzM1NywyMjIgMzkwLDI0OCAzOTAsMjQ4IEMzOTAsMjQ4IDQyMywyMjIgNDIzLDE5NVoiIGZpbGw9IiNmNGEwYjAiIHRyYW5zZm9ybT0icm90YXRlKDEwIDM5MCAyMTUpIi8+PHBhdGggZD0iTTMzMCAyMjAgQzMzMCwxOTAgMjk1LDE3OCAyNTYsMjA1IEMyMTcsMTc4IDE4MiwxOTAgMTgyLDIyMCBDMTgyLDI2MiAyNTYsMzEwIDI1NiwzMTAgQzI1NiwzMTAgMzMwLDI2MiAzMzAsMjIwWiIgZmlsbD0idXJsKCNtZykiLz48Y2lyY2xlIGN4PSIyNTYiIGN5PSIzMzgiIHI9IjEwIiBmaWxsPSIjZmZkNzAwIiBvcGFjaXR5PSIwLjkiLz48Y2lyY2xlIGN4PSIxNTAiIGN5PSIxNjYiIHI9IjciIGZpbGw9IiNmOWQwZGIiIG9wYWNpdHk9IjAuOCIvPjxjaXJjbGUgY3g9IjM2MiIgY3k9IjE2NiIgcj0iNyIgZmlsbD0iI2Q0Nzg5YSIgb3BhY2l0eT0iMC44Ii8+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJtZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNlODYzN2EiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNjOTQwNjAiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48L3N2Zz4="/>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<style>
+:root {
+  --bg: #fdf0f5;
+  --bg2: #fde8f0;
+  --card: rgba(255,255,255,0.82);
+  --card-border: rgba(255,200,220,0.5);
+  --rose: #e8637a;
+  --rose-light: #f4a0b0;
+  --rose-dark: #c94060;
+  --blush: #f9d0db;
+  --mauve: #d4789a;
+  --cream: #fff5f8;
+  --text: #3a2030;
+  --text2: #7a5068;
+  --text3: #b08898;
+  --green: #6dbf8a;
+  --green-bg: #edfff4;
+  --red: #e8637a;
+  --red-bg: #fff0f2;
+  --amber: #f0a050;
+  --amber-bg: #fff8ee;
+  --shadow: 0 8px 32px rgba(200,80,120,0.13);
+  --shadow-sm: 0 2px 12px rgba(200,80,120,0.1);
+  --radius: 20px;
+  --radius-sm: 12px;
+  font-family: 'Nunito', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  height: 100%;
+  background: linear-gradient(160deg, #fde8f5 0%, #fdf0e8 50%, #f0e8fd 100%);
+  color: var(--text);
+  font-family: 'Nunito', sans-serif;
+  overflow: hidden;
+}
+
+/* ─── ANIMATED BG ─── */
+.bg-blobs { position: fixed; inset: 0; pointer-events: none; z-index: 0; }
+.blob { position: absolute; border-radius: 50%; filter: blur(60px); opacity: 0.35; animation: blobFloat 8s ease-in-out infinite; }
+.blob1 { width: 300px; height: 300px; background: #f9c8d8; top: -80px; left: -80px; animation-delay: 0s; }
+.blob2 { width: 250px; height: 250px; background: #e8d0f8; top: 30%; right: -60px; animation-delay: 2s; }
+.blob3 { width: 200px; height: 200px; background: #ffd8e8; bottom: 10%; left: 20%; animation-delay: 4s; }
+@keyframes blobFloat { 0%,100% { transform: translateY(0) scale(1); } 50% { transform: translateY(-20px) scale(1.05); } }
+
+/* ─── APP SHELL ─── */
+#app { position: relative; z-index: 1; height: 100vh; display: flex; flex-direction: column; max-width: 480px; margin: 0 auto; }
+
+/* ─── AUTH SCREEN ─── */
+#auth-screen {
+  position: fixed; inset: 0; z-index: 100;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  background: linear-gradient(160deg, #fde0f0 0%, #f8e8ff 50%, #ffe0e8 100%);
+  padding: 32px;
+}
+
+/* ─── LOGO ICON (no text) ─── */
+.logo-icon {
+  width: 100px; height: 100px;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto;
+}
+
+/* Auth logo area */
+.auth-logo {
+  margin-bottom: 28px;
+  display: flex; flex-direction: column; align-items: center;
+}
+
+/* Heartbeat animation for auth logo */
+@keyframes heartbeat {
+  0%   { transform: scale(1); }
+  14%  { transform: scale(1.18); }
+  28%  { transform: scale(1); }
+  42%  { transform: scale(1.12); }
+  70%  { transform: scale(1); }
+  100% { transform: scale(1); }
+}
+@keyframes orbitLeft {
+  0%   { transform: rotate(0deg) translateX(30px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateX(30px) rotate(-360deg); }
+}
+@keyframes orbitRight {
+  0%   { transform: rotate(180deg) translateX(30px) rotate(-180deg); }
+  100% { transform: rotate(540deg) translateX(30px) rotate(-540deg); }
+}
+@keyframes pulseGlow {
+  0%,100% { filter: drop-shadow(0 0 6px rgba(232,99,122,0.4)); }
+  50%      { filter: drop-shadow(0 0 18px rgba(232,99,122,0.8)); }
+}
+@keyframes authNeedle {
+  0%   { transform: rotate(-78deg); }
+  65%  { transform: rotate(26deg); }
+  80%  { transform: rotate(18deg); }
+  100% { transform: rotate(22deg); }
+}
+
+/* Auth logo SVG container */
+.auth-logo-svg {
+  width: 110px; height: 110px;
+  animation: pulseGlow 2.4s ease-in-out infinite;
+}
+
+/* Header logo (smaller) */
+.header-logo-icon {
+  width: 40px; height: 40px;
+  flex-shrink: 0;
+}
+
+/* Header logo text scroll-in */
+@keyframes slideInLeft {
+  0%   { opacity: 0; transform: translateX(-18px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+.header-logo-text {
+  font-size: 20px; font-weight: 900; color: var(--rose-dark);
+  animation: slideInLeft 0.6s cubic-bezier(.34,1.56,.64,1) both;
+}
+
+.auth-title {
+  font-size: 36px; font-weight: 900; color: var(--rose-dark);
+  text-align: center; line-height: 1.1; margin-bottom: 8px;
+}
+.auth-sub { font-size: 15px; color: var(--text2); text-align: center; margin-bottom: 48px; font-weight: 600; }
+.google-btn {
+  display: flex; align-items: center; gap: 12px;
+  background: white; border: 2px solid var(--blush);
+  padding: 16px 32px; border-radius: 50px; cursor: pointer;
+  font-family: 'Nunito', sans-serif; font-size: 16px; font-weight: 700; color: var(--text);
+  box-shadow: 0 4px 20px rgba(200,80,120,0.15);
+  transition: all 0.2s; width: 100%; max-width: 320px; justify-content: center;
+}
+.google-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(200,80,120,0.22); }
+.auth-note { margin-top: 24px; font-size: 13px; color: var(--text3); text-align: center; }
+
+/* ─── HEADER ─── */
+#header {
+  padding: 12px 20px 8px;
+  display: flex; align-items: center; justify-content: space-between;
+  background: rgba(253,240,245,0.8); backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--card-border);
+}
+.header-logo { display: flex; align-items: center; gap: 8px; }
+.user-avatar {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--rose), var(--mauve));
+  display: flex; align-items: center; justify-content: center;
+  color: white; font-weight: 800; font-size: 14px; cursor: pointer;
+  border: 2px solid white; box-shadow: var(--shadow-sm); overflow: hidden;
+}
+.user-avatar img { width: 100%; height: 100%; object-fit: cover; }
+
+/* ─── CONTENT ─── */
+#content { flex: 1; overflow-y: auto; overflow-x: hidden; padding-bottom: 80px; }
+#content::-webkit-scrollbar { width: 4px; }
+#content::-webkit-scrollbar-thumb { background: var(--blush); border-radius: 4px; }
+
+/* ─── TAB BAR ─── */
+#tabbar {
+  position: fixed; bottom: 0; left: 50%; transform: translateX(-50%);
+  width: 100%; max-width: 480px; display: flex;
+  background: rgba(255,255,255,0.92); backdrop-filter: blur(16px);
+  border-top: 1px solid var(--card-border);
+  padding: 8px 0 12px; z-index: 50;
+}
+.tab-btn {
+  flex: 1; display: flex; flex-direction: column; align-items: center; gap: 3px;
+  background: none; border: none; cursor: pointer; padding: 6px 4px;
+  font-family: 'Nunito', sans-serif; font-size: 10px; font-weight: 700;
+  color: var(--text3); transition: all 0.2s;
+}
+.tab-btn.active { color: var(--rose); }
+.tab-icon { font-size: 22px; transition: transform 0.2s; }
+.tab-btn.active .tab-icon { transform: scale(1.15); }
+
+/* ─── CARD ─── */
+.card {
+  background: var(--card); backdrop-filter: blur(12px);
+  border: 1px solid var(--card-border); border-radius: var(--radius);
+  box-shadow: var(--shadow); padding: 20px; margin: 12px 16px;
+}
+.card-sm { padding: 14px; margin: 8px 16px; border-radius: var(--radius-sm); }
+
+/* ─── PAGE TITLE ─── */
+.page-title {
+  font-size: 22px; font-weight: 900; color: var(--rose-dark);
+  padding: 16px 16px 4px; line-height: 1.2;
+}
+.page-subtitle {
+  font-size: 13px; color: var(--text3); font-weight: 600;
+  padding: 0 16px 8px;
+}
+
+/* ─── JOURNEY TAB ─── */
+.zero-state { text-align: center; padding: 40px 20px; }
+.zero-emoji { font-size: 48px; margin-bottom: 16px; animation: heartbeat 2.2s ease-in-out infinite; }
+.zero-title { font-size: 22px; font-weight: 900; color: var(--rose-dark); margin-bottom: 8px; line-height: 1.3; }
+.zero-sub { font-size: 14px; color: var(--text2); font-weight: 600; }
+
+.milestone-bar { margin: 0 16px 8px; }
+.milestone-label { font-size: 13px; font-weight: 700; color: var(--text2); margin-bottom: 8px; display: flex; align-items: center; justify-content: space-between; }
+.milestone-track { height: 12px; background: var(--blush); border-radius: 8px; overflow: hidden; }
+.milestone-fill {
+  height: 100%; border-radius: 8px;
+  background: linear-gradient(90deg, var(--rose-light), var(--rose));
+  transition: width 1s cubic-bezier(.68,-0.55,.27,1.55);
+  position: relative; overflow: hidden;
+}
+.milestone-fill::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  animation: shimmer 2s infinite;
+}
+@keyframes shimmer { 0% { transform: translateX(-100%); } 100% { transform: translateX(100%); } }
+.milestone-text { font-size: 13px; color: var(--rose); font-weight: 700; text-align: center; margin-top: 8px; }
+
+.stats-row { display: flex; gap: 8px; margin: 8px 16px; }
+.stat-pill {
+  flex: 1; background: var(--card); border: 1px solid var(--card-border);
+  border-radius: var(--radius-sm); padding: 12px 8px; text-align: center;
+  box-shadow: var(--shadow-sm);
+}
+.stat-num { font-size: 24px; font-weight: 900; color: var(--rose); }
+.stat-lbl { font-size: 11px; color: var(--text3); font-weight: 700; margin-top: 2px; }
+
+.section-title { font-size: 16px; font-weight: 800; color: var(--text); margin: 16px 16px 4px; }
+
+.top-scorer-bar { margin: 4px 0; }
+.tsb-label { font-size: 12px; font-weight: 700; color: var(--text2); display: flex; justify-content: space-between; margin-bottom: 3px; }
+.tsb-track { height: 8px; background: var(--blush); border-radius: 6px; overflow: hidden; }
+.tsb-fill { height: 100%; border-radius: 6px; background: linear-gradient(90deg, var(--rose-light), var(--rose)); transition: width 1.2s ease; }
+
+.insight-pill {
+  display: flex; align-items: center; gap: 10px;
+  background: var(--cream); border: 1px solid var(--blush);
+  border-radius: 12px; padding: 12px 14px; margin: 6px 0;
+  font-size: 13px; font-weight: 600; color: var(--text2);
+}
+.insight-icon { font-size: 18px; flex-shrink: 0; }
+
+.wisdom-card {
+  background: linear-gradient(135deg, var(--rose) 0%, var(--mauve) 100%);
+  border-radius: var(--radius); padding: 20px; margin: 12px 16px;
+  color: white; text-align: center; position: relative; overflow: hidden;
+}
+.wisdom-card::before {
+  content: ''; position: absolute; top: -40px; right: -40px;
+  width: 120px; height: 120px; border-radius: 50%;
+  background: rgba(255,255,255,0.1);
+}
+.wisdom-text { font-size: 15px; font-weight: 700; line-height: 1.5; position: relative; transition: opacity 0.3s; }
+.wisdom-dots { display: flex; gap: 6px; justify-content: center; margin-top: 14px; }
+.wisdom-dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,0.4); cursor: pointer; transition: all 0.2s; }
+.wisdom-dot.active { background: white; width: 18px; border-radius: 3px; }
+
+/* ─── PEOPLE TAB ─── */
+.filter-scroll { display: flex; gap: 8px; padding: 12px 16px; overflow-x: auto; scrollbar-width: none; }
+.filter-scroll::-webkit-scrollbar { display: none; }
+.filter-chip {
+  flex-shrink: 0; padding: 8px 16px; border-radius: 50px;
+  border: 2px solid var(--blush); background: white;
+  font-family: 'Nunito', sans-serif; font-size: 13px; font-weight: 700; color: var(--text2);
+  cursor: pointer; transition: all 0.2s; white-space: nowrap;
+}
+.filter-chip.active {
+  background: linear-gradient(135deg, var(--rose), var(--mauve));
+  border-color: transparent; color: white;
+  box-shadow: 0 4px 14px rgba(200,80,120,0.3);
+}
+
+.person-card {
+  background: var(--card); backdrop-filter: blur(12px);
+  border: 1px solid var(--card-border); border-radius: var(--radius);
+  box-shadow: var(--shadow-sm); padding: 16px; margin: 8px 16px;
+  display: flex; align-items: center; gap: 14px; cursor: pointer;
+  transition: all 0.2s; position: relative; overflow: hidden;
+}
+.person-card:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+.person-card::before {
+  content: ''; position: absolute; left: 0; top: 0; bottom: 0;
+  width: 4px; border-radius: 4px 0 0 4px;
+}
+.person-card.pursue::before { background: var(--green); }
+.person-card.maybe::before { background: var(--amber); }
+.person-card.not-him::before { background: #ccc; }
+.person-card.ghosted::before { background: #999; }
+.person-card.on-pause::before { background: var(--amber); }
+.person-card.red-flag::before { background: var(--red); }
+.person-card.the-one::before { background: linear-gradient(180deg, #ffd700, var(--rose)); }
+
+.person-avatar {
+  width: 50px; height: 50px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--rose-light), var(--mauve));
+  display: flex; align-items: center; justify-content: center;
+  color: white; font-weight: 900; font-size: 20px; flex-shrink: 0; position: relative;
+}
+.score-ring { position: absolute; inset: -4px; width: 58px; height: 58px; }
+.person-info { flex: 1; min-width: 0; }
+.person-name { font-size: 16px; font-weight: 800; color: var(--text); }
+.person-meta { font-size: 12px; color: var(--text3); font-weight: 600; margin-top: 2px; }
+.person-badges { display: flex; gap: 4px; margin-top: 5px; flex-wrap: wrap; }
+.badge { font-size: 10px; font-weight: 800; padding: 3px 8px; border-radius: 20px; }
+.badge-mismatch { background: #fff3cd; color: #856404; }
+.badge-risk { background: var(--red-bg); color: var(--red); }
+.badge-theone { background: #fff9e6; color: #b8860b; }
+
+.status-pill { font-size: 11px; font-weight: 800; padding: 4px 10px; border-radius: 20px; flex-shrink: 0; }
+.status-pursue { background: var(--green-bg); color: #2d8a5a; }
+.status-maybe { background: var(--amber-bg); color: #a06020; }
+.status-not-him { background: #f5f5f5; color: #888; }
+.status-ghosted { background: #f0f0f0; color: #888; }
+.status-on-pause { background: var(--amber-bg); color: #a06020; }
+.status-red-flag { background: var(--red-bg); color: var(--red); }
+.status-the-one { background: #fff9e6; color: #b8860b; }
+
+/* ─── FAB ─── */
+.fab {
+  position: fixed; bottom: 82px; right: calc(50% - 230px);
+  width: 56px; height: 56px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--rose), var(--mauve));
+  border: none; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  font-size: 26px; color: white; box-shadow: 0 6px 24px rgba(200,80,120,0.4);
+  transition: all 0.2s; z-index: 40;
+}
+.fab:hover { transform: scale(1.1) rotate(90deg); }
+@media (max-width: 480px) { .fab { right: 20px; } }
+
+/* ─── MODAL ─── */
+.modal-overlay {
+  position: fixed; inset: 0; z-index: 200;
+  background: rgba(60,20,40,0.45); backdrop-filter: blur(6px);
+  display: flex; align-items: flex-end; justify-content: center;
+  opacity: 0; pointer-events: none; transition: opacity 0.3s;
+}
+.modal-overlay.open { opacity: 1; pointer-events: all; }
+.modal-sheet {
+  background: var(--bg); border-radius: 28px 28px 0 0;
+  width: 100%; max-width: 480px; max-height: 92vh; overflow-y: auto;
+  padding: 0 0 32px; transform: translateY(100%); transition: transform 0.35s cubic-bezier(.4,0,.2,1);
+}
+.modal-overlay.open .modal-sheet { transform: translateY(0); }
+.modal-handle { width: 40px; height: 4px; background: var(--blush); border-radius: 2px; margin: 14px auto 0; }
+.modal-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 16px 20px 8px;
+}
+.modal-title { font-size: 20px; font-weight: 900; color: var(--text); }
+.modal-close { background: none; border: none; font-size: 22px; cursor: pointer; color: var(--text3); padding: 4px; }
+.modal-body { padding: 8px 20px; }
+
+/* ─── FORM ELEMENTS ─── */
+.form-group { margin-bottom: 16px; }
+.form-label { font-size: 13px; font-weight: 800; color: var(--text2); margin-bottom: 6px; display: block; }
+.form-input {
+  width: 100%; padding: 12px 16px; border-radius: var(--radius-sm);
+  border: 2px solid var(--blush); background: white;
+  font-family: 'Nunito', sans-serif; font-size: 15px; font-weight: 600; color: var(--text);
+  outline: none; transition: border-color 0.2s;
+}
+.form-input:focus { border-color: var(--rose-light); }
+.form-textarea { resize: vertical; min-height: 80px; }
+
+.option-grid { display: grid; gap: 8px; }
+.option-grid.cols2 { grid-template-columns: 1fr 1fr; }
+.option-grid.cols3 { grid-template-columns: 1fr 1fr 1fr; }
+.option-btn {
+  padding: 10px 8px; border-radius: var(--radius-sm);
+  border: 2px solid var(--blush); background: white;
+  font-family: 'Nunito', sans-serif; font-size: 12px; font-weight: 700; color: var(--text2);
+  cursor: pointer; transition: all 0.18s; text-align: center; line-height: 1.3;
+  -webkit-tap-highlight-color: transparent;
+}
+.option-btn.selected {
+  border-color: var(--rose); background: linear-gradient(135deg, #fff0f4, #ffe0ea);
+  color: var(--rose-dark); box-shadow: 0 2px 10px rgba(200,80,120,0.15);
+}
+.option-btn:active { transform: scale(0.96); }
+
+/* ─── STAR RATING ─── */
+.trait-list { display: flex; flex-direction: column; gap: 10px; }
+.trait-row { display: flex; align-items: center; gap: 10px; }
+.trait-name { flex: 1; font-size: 13px; font-weight: 700; color: var(--text2); }
+.star-row { display: flex; gap: 3px; }
+.star { font-size: 22px; cursor: pointer; transition: transform 0.15s; color: #ddd; line-height: 1; -webkit-tap-highlight-color: transparent; }
+.star.filled { color: #ffc107; }
+.star:active { transform: scale(1.3); }
+
+/* ─── FLAGS ─── */
+.flag-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.flag-tag {
+  padding: 6px 12px; border-radius: 20px; font-size: 12px; font-weight: 700;
+  cursor: pointer; transition: all 0.18s; border: 2px solid transparent;
+  -webkit-tap-highlight-color: transparent;
+}
+.flag-tag.green { background: var(--green-bg); color: #2d8a5a; border-color: #a8e6c0; }
+.flag-tag.green.selected { background: #2d8a5a; color: white; }
+.flag-tag.red { background: var(--red-bg); color: var(--red); border-color: #f9c0c8; }
+.flag-tag.red.selected { background: var(--red); color: white; }
+
+/* ─── YES/NO QUESTIONS ─── */
+.yn-list { display: flex; flex-direction: column; gap: 12px; }
+.yn-row {
+  display: flex; align-items: center; gap: 10px;
+  background: white; border: 1px solid var(--blush);
+  border-radius: var(--radius-sm); padding: 10px 14px;
+}
+.yn-label { flex: 1; font-size: 13px; font-weight: 700; color: var(--text2); line-height: 1.35; }
+.yn-btns { display: flex; gap: 6px; flex-shrink: 0; }
+.yn-btn {
+  padding: 5px 10px; border-radius: 20px; font-size: 12px; font-weight: 800;
+  cursor: pointer; border: 2px solid var(--blush); background: white;
+  font-family: 'Nunito', sans-serif; color: var(--text2); transition: all 0.15s;
+  -webkit-tap-highlight-color: transparent; white-space: nowrap;
+}
+.yn-btn.yes.active { background: var(--green-bg); border-color: var(--green); color: #2d8a5a; }
+.yn-btn.no.active  { background: var(--red-bg);   border-color: var(--red);   color: var(--red); }
+
+/* ─── STEP INDICATOR ─── */
+.step-indicator { display: flex; gap: 6px; justify-content: center; padding: 12px 0 4px; }
+.step-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--blush); transition: all 0.3s; }
+.step-dot.active { background: var(--rose); width: 24px; border-radius: 4px; }
+.step-dot.done { background: var(--rose-light); }
+
+.step-nav { display: flex; gap: 10px; margin-top: 20px; }
+.btn-back {
+  flex: 1; padding: 14px; border-radius: 50px; border: 2px solid var(--blush);
+  background: white; font-family: 'Nunito', sans-serif; font-size: 15px; font-weight: 800;
+  color: var(--text2); cursor: pointer; transition: all 0.2s;
+}
+.btn-next {
+  flex: 2; padding: 14px; border-radius: 50px; border: none;
+  background: linear-gradient(135deg, var(--rose), var(--mauve));
+  font-family: 'Nunito', sans-serif; font-size: 15px; font-weight: 800;
+  color: white; cursor: pointer; transition: all 0.2s;
+  box-shadow: 0 4px 16px rgba(200,80,120,0.3);
+}
+.btn-next:hover { transform: translateY(-1px); box-shadow: 0 6px 22px rgba(200,80,120,0.4); }
+.btn-full {
+  width: 100%; padding: 16px; border-radius: 50px; border: none;
+  background: linear-gradient(135deg, var(--rose), var(--mauve));
+  font-family: 'Nunito', sans-serif; font-size: 16px; font-weight: 900;
+  color: white; cursor: pointer; margin-top: 16px;
+  box-shadow: 0 4px 18px rgba(200,80,120,0.35); transition: all 0.2s;
+}
+.btn-full:hover { transform: translateY(-1px); }
+.btn-danger {
+  background: none; border: 2px solid var(--red); color: var(--red); border-radius: 50px;
+  padding: 12px; font-family: 'Nunito', sans-serif; font-size: 14px; font-weight: 800;
+  cursor: pointer; transition: all 0.2s; width: 100%; margin-top: 8px;
+}
+
+/* ─── PROFILE VIEW ─── */
+.profile-header { padding: 24px 20px 16px; text-align: center; }
+.profile-avatar {
+  width: 80px; height: 80px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--rose-light), var(--mauve));
+  display: flex; align-items: center; justify-content: center;
+  color: white; font-weight: 900; font-size: 32px;
+  margin: 0 auto 12px; position: relative;
+  box-shadow: 0 8px 24px rgba(200,80,120,0.25);
+}
+.profile-name { font-size: 26px; font-weight: 900; color: var(--text); }
+.profile-meta { font-size: 13px; color: var(--text3); font-weight: 600; margin-top: 4px; }
+
+.score-compat { display: flex; gap: 12px; margin: 12px 16px; }
+.score-box {
+  flex: 1; background: var(--card); border: 1px solid var(--card-border);
+  border-radius: var(--radius-sm); padding: 16px; text-align: center; box-shadow: var(--shadow-sm);
+}
+.score-big { font-size: 28px; font-weight: 900; }
+.score-lbl { font-size: 11px; color: var(--text3); font-weight: 700; margin-top: 2px; }
+
+.info-tags { display: flex; gap: 8px; flex-wrap: wrap; margin: 4px 16px 12px; }
+.info-tag {
+  padding: 6px 14px; border-radius: 20px; background: var(--cream);
+  border: 1px solid var(--blush); font-size: 12px; font-weight: 700; color: var(--text2);
+}
+.first-impression { margin: 8px 16px; }
+.quote-box {
+  background: linear-gradient(135deg, #fff5f8, #fff0ea);
+  border-left: 4px solid var(--rose-light); border-radius: 0 12px 12px 0;
+  padding: 14px 16px; font-size: 14px; color: var(--text2); font-style: italic; font-weight: 600;
+}
+.traits-section { margin: 12px 16px; }
+.trait-detail { display: flex; align-items: center; gap: 10px; padding: 8px 0; border-bottom: 1px solid var(--blush); }
+.trait-detail:last-child { border-bottom: none; }
+.trait-detail-name { flex: 1; font-size: 13px; font-weight: 700; color: var(--text2); }
+.trait-stars { font-size: 14px; color: #ffc107; }
+.flags-section { margin: 12px 16px; display: flex; gap: 12px; }
+.flags-col { flex: 1; }
+.flags-title { font-size: 13px; font-weight: 800; color: var(--text2); margin-bottom: 8px; }
+
+/* ─── INSIGHTS TAB ─── */
+.bar-chart { margin: 4px 0; }
+.bc-row { display: flex; align-items: center; gap: 10px; margin: 6px 0; }
+.bc-label { font-size: 12px; font-weight: 700; color: var(--text2); width: 110px; flex-shrink: 0; text-align: right; }
+.bc-track { flex: 1; height: 10px; background: var(--blush); border-radius: 6px; overflow: hidden; }
+.bc-fill { height: 100%; border-radius: 6px; background: linear-gradient(90deg, var(--rose-light), var(--rose)); transition: width 1.2s ease; }
+.bc-count { font-size: 12px; font-weight: 800; color: var(--rose); width: 24px; }
+
+/* Non-negotiables as checklist */
+.nonneg-card {
+  background: var(--card); border: 1px solid var(--card-border);
+  border-radius: var(--radius); padding: 16px; margin: 8px 16px;
+}
+.nonneg-section-title { font-size: 15px; font-weight: 900; color: var(--rose-dark); margin-bottom: 12px; }
+.nonneg-yn-row {
+  display: flex; align-items: flex-start; gap: 10px;
+  border-bottom: 1px solid var(--blush); padding: 10px 0;
+}
+.nonneg-yn-row:last-child { border-bottom: none; }
+.nonneg-yn-text { flex: 1; font-size: 13px; font-weight: 600; color: var(--text2); line-height: 1.4; }
+.nonneg-yn-btns { display: flex; gap: 6px; flex-shrink: 0; }
+.nonneg-yn-btn {
+  padding: 4px 10px; border-radius: 20px; font-size: 11px; font-weight: 800;
+  cursor: pointer; border: 2px solid var(--blush); background: white;
+  font-family: 'Nunito', sans-serif; color: var(--text2); transition: all 0.15s;
+  -webkit-tap-highlight-color: transparent; white-space: nowrap;
+}
+.nonneg-yn-btn.yes.active { background: var(--green-bg); border-color: var(--green); color: #2d8a5a; }
+.nonneg-yn-btn.no.active  { background: var(--red-bg);   border-color: var(--red);   color: var(--red); }
+
+/* ─── TOAST ─── */
+.toast {
+  position: fixed; top: 24px; left: 50%; transform: translateX(-50%) translateY(-80px);
+  background: var(--text); color: white; padding: 12px 24px; border-radius: 50px;
+  font-size: 14px; font-weight: 700; z-index: 999; transition: transform 0.35s ease;
+  white-space: nowrap;
+}
+.toast.show { transform: translateX(-50%) translateY(0); }
+
+/* ─── LOADING DOTS ─── */
+.loading-dots { display: inline-flex; gap: 4px; }
+.loading-dots span { width: 6px; height: 6px; border-radius: 50%; background: var(--rose); animation: dotBounce 1.2s ease-in-out infinite; }
+.loading-dots span:nth-child(2) { animation-delay: 0.2s; }
+.loading-dots span:nth-child(3) { animation-delay: 0.4s; }
+@keyframes dotBounce { 0%,80%,100% { transform: scale(0.7); opacity: 0.5; } 40% { transform: scale(1); opacity: 1; } }
+
+/* ─── INTENTION WARNING ─── */
+.intention-warning {
+  background: #fff8f0; border: 2px solid var(--amber);
+  border-radius: 12px; padding: 12px 14px; margin-top: 10px;
+  font-size: 13px; font-weight: 700; color: #a06020; display: none;
+}
+
+/* ─── EMPTY ─── */
+.empty-people { text-align: center; padding: 60px 32px; color: var(--text3); font-size: 14px; font-weight: 600; }
+.empty-people .big { font-size: 40px; margin-bottom: 12px; }
+
+/* ─── PROFILE MODAL extras ─── */
+.modal-overlay.profile-mode .modal-sheet { max-height: 96vh; }
+
+/* ─── DROPDOWN ─── */
+.logout-menu {
+  position: absolute; top: 60px; right: 16px; z-index: 300;
+  background: white; border-radius: 16px; box-shadow: var(--shadow);
+  border: 1px solid var(--blush); overflow: hidden; min-width: 160px; display: none;
+}
+.logout-menu.open { display: block; }
+.logout-item {
+  padding: 14px 18px; font-size: 14px; font-weight: 700; color: var(--text2);
+  cursor: pointer; display: flex; align-items: center; gap: 8px; transition: background 0.15s;
+}
+.logout-item:hover { background: var(--cream); }
+.logout-item.danger { color: var(--red); }
+
+/* Risk colours */
+.risk-green { color: var(--green); }
+.risk-amber { color: var(--amber); }
+.risk-red   { color: var(--red); }
+</style>
+</head>
+<body>
+
+<!-- BG -->
+<div class="bg-blobs">
+  <div class="blob blob1"></div>
+  <div class="blob blob2"></div>
+  <div class="blob blob3"></div>
+</div>
+
+<!-- AUTH SCREEN -->
+<div id="auth-screen">
+  <div class="auth-logo">
+    <!-- Clean icon-only logo: two hearts converging, with a spark/destiny dot in centre -->
+    <svg class="auth-logo-svg" viewBox="0 0 110 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="authGlow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#e8637a"/>
+          <stop offset="100%" stop-color="#d4789a" stop-opacity="0"/>
+        </radialGradient>
+        <linearGradient id="leftHeart" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#f9d0db"/>
+          <stop offset="100%" stop-color="#d4789a"/>
+        </linearGradient>
+        <linearGradient id="rightHeart" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#f9d0db"/>
+          <stop offset="100%" stop-color="#d4789a"/>
+        </linearGradient>
+        <linearGradient id="mainHeart" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#e8637a"/>
+          <stop offset="100%" stop-color="#c94060"/>
+        </linearGradient>
+      </defs>
+      <!-- Outer soft glow ring -->
+      <circle cx="55" cy="55" r="50" fill="url(#authGlow)" opacity="0.18"/>
+      <!-- Gauge track: deep plum -->
+      <path d="M17,74 A42,42 0 0,1 93,74" fill="none" stroke="#7a4060" stroke-width="6" stroke-linecap="round"/>
+      <!-- Gauge fill: bright rose -->
+      <path d="M17,74 A42,42 0 0,1 93,74" fill="none" stroke="#e8637a" stroke-width="6"
+            stroke-linecap="round" stroke-dasharray="132" stroke-dashoffset="42"/>
+      <!-- Gauge ticks -->
+      <line x1="17" y1="74" x2="11" y2="65" stroke="#6a3050" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="30" y1="41" x2="25" y2="35" stroke="#6a3050" stroke-width="1.4" stroke-linecap="round"/>
+      <line x1="55" y1="32" x2="55" y2="25" stroke="#6a3050" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="80" y1="41" x2="85" y2="35" stroke="#6a3050" stroke-width="1.4" stroke-linecap="round"/>
+      <line x1="93" y1="74" x2="99" y2="65" stroke="#6a3050" stroke-width="1.8" stroke-linecap="round"/>
+      <!-- Needle -->
+      <g style="transform-origin:55px 74px; animation:authNeedle 1.6s cubic-bezier(.4,0,.2,1) 0.3s both">
+        <line x1="55" y1="80" x2="55" y2="34" stroke="#5a2040" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="55" y1="74" x2="55" y2="82" stroke="#5a2040" stroke-width="2.5" opacity="0.25" stroke-linecap="round"/>
+      </g>
+      <!-- Hub -->
+      <circle cx="55" cy="74" r="6" fill="white" stroke="#7a4060" stroke-width="1.5"/>
+      <circle cx="55" cy="74" r="3" fill="#c94060"/>
+      <!-- Left heart (slightly smaller, tilted) -->
+      <path d="M38 44 C38,38 30,36 27,41 C24,36 16,38 16,44 C16,52 27,60 27,60 C27,60 38,52 38,44Z"
+            fill="url(#leftHeart)" transform="rotate(-10 27 50)"/>
+      <!-- Right heart -->
+      <path d="M94 44 C94,38 86,36 83,41 C80,36 72,38 72,44 C72,52 83,60 83,60 C83,60 94,52 94,44Z"
+            fill="url(#rightHeart)" transform="rotate(10 83 50)"/>
+      <!-- Centre main heart (bigger, prominent) -->
+      <path d="M71,48 C71,40 62,37 56,43 C50,37 41,40 41,48 C41,58 56,70 56,70 C56,70 71,58 71,48Z"
+            fill="url(#mainHeart)">
+        <animate attributeName="d"
+          values="
+            M71,48 C71,40 62,37 56,43 C50,37 41,40 41,48 C41,58 56,70 56,70 C56,70 71,58 71,48Z;
+            M73,46 C73,37 63,34 56,41 C49,34 39,37 39,46 C39,57 56,72 56,72 C56,72 73,57 73,46Z;
+            M71,48 C71,40 62,37 56,43 C50,37 41,40 41,48 C41,58 56,70 56,70 C56,70 71,58 71,48Z"
+          dur="1.1s" repeatCount="indefinite" calcMode="spline"
+          keySplines="0.42 0 0.58 1; 0.42 0 0.58 1"/>
+      </path>
+      <!-- Sparkles -->
+      <circle cx="55" cy="22" r="3" fill="#ffd700" opacity="0.9">
+        <animate attributeName="r" values="2;4;2" dur="1.4s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.9;0.3;0.9" dur="1.4s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="30" cy="36" r="2" fill="#f9d0db" opacity="0.8">
+        <animate attributeName="r" values="1.5;3;1.5" dur="1.8s" repeatCount="indefinite" begin="0.3s"/>
+      </circle>
+      <circle cx="80" cy="36" r="2" fill="#d4789a" opacity="0.8">
+        <animate attributeName="r" values="1.5;3;1.5" dur="1.6s" repeatCount="indefinite" begin="0.6s"/>
+      </circle>
+    </svg>
+  </div>
+  <div class="auth-title">Soul·O·Meter</div>
+  <div class="auth-sub">Align first, attach later 🌸</div>
+  <button class="google-btn" onclick="signInWithGoogle()">
+    <svg width="20" height="20" viewBox="0 0 24 24">
+      <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+      <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+      <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/>
+      <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+    </svg>
+    Continue with Google
+  </button>
+  <div class="auth-note">Your data stays with you. No party crashers 🔒</div>
+</div>
+
+<!-- MAIN APP -->
+<div id="app" style="display:none">
+  <div id="header">
+    <div class="header-logo">
+      <!-- Header icon-only logo (smaller) -->
+      <svg class="header-logo-icon" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Two small side hearts -->
+        <path d="M20,22 C20,18 15,16 13,19 C11,16 6,18 6,22 C6,27 13,33 13,33 C13,33 20,27 20,22Z"
+              fill="#f4a0b0" transform="rotate(-8 13 24)"/>
+        <path d="M54,22 C54,18 49,16 47,19 C45,16 40,18 40,22 C40,27 47,33 47,33 C47,33 54,27 54,22Z"
+              fill="#f4a0b0" transform="rotate(8 47 24)"/>
+        <!-- Main centre heart -->
+        <path d="M40,27 C40,21 34,19 30,24 C26,19 20,21 20,27 C20,34 30,44 30,44 C30,44 40,34 40,27Z"
+              fill="url(#hdrHeart)">
+          <animate attributeName="d"
+            values="
+              M40,27 C40,21 34,19 30,24 C26,19 20,21 20,27 C20,34 30,44 30,44 C30,44 40,34 40,27Z;
+              M42,25 C42,18 35,16 30,22 C25,16 18,18 18,25 C18,33 30,46 30,46 C30,46 42,33 42,25Z;
+              M40,27 C40,21 34,19 30,24 C26,19 20,21 20,27 C20,34 30,44 30,44 C30,44 40,34 40,27Z"
+            dur="1.1s" repeatCount="indefinite" calcMode="spline"
+            keySplines="0.42 0 0.58 1; 0.42 0 0.58 1"/>
+        </path>
+        <defs>
+          <linearGradient id="hdrHeart" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#e8637a"/>
+            <stop offset="100%" stop-color="#c94060"/>
+          </linearGradient>
+        </defs>
+      </svg>
+      <span class="header-logo-text" id="headerText">Love Loading</span>
+    </div>
+    <div style="position:relative">
+      <div class="user-avatar" id="userAvatar">?</div>
+      <div class="logout-menu" id="logoutMenu">
+        <div class="logout-item" id="signOutBtn">🚪 Sign out</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="content"></div>
+
+  <nav id="tabbar">
+    <button class="tab-btn active" onclick="switchTab('journey')" id="tab-journey">
+      <span class="tab-icon">❤️</span> Journey
+    </button>
+    <button class="tab-btn" onclick="switchTab('people')" id="tab-people">
+      <span class="tab-icon">👥</span> People
+    </button>
+    <button class="tab-btn" onclick="switchTab('insights')" id="tab-insights">
+      <span class="tab-icon">🧠</span> Insights
+    </button>
+  </nav>
+
+  <button class="fab" onclick="openAddModal()" title="Add person">＋</button>
+</div>
+
+<!-- ADD/EDIT MODAL -->
+<div class="modal-overlay" id="addModal">
+  <div class="modal-sheet">
+    <div class="modal-handle"></div>
+    <div class="modal-header">
+      <div class="modal-title" id="modalTitle">New Chapter 🌸</div>
+      <button class="modal-close" onclick="closeAddModal()">✕</button>
+    </div>
+    <div class="step-indicator" id="stepIndicator"></div>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+<!-- PROFILE MODAL -->
+<div class="modal-overlay profile-mode" id="profileModal">
+  <div class="modal-sheet">
+    <div class="modal-handle"></div>
+    <div class="modal-header">
+      <div class="modal-title">His Profile 💌</div>
+      <button class="modal-close" onclick="closeProfileModal()">✕</button>
+    </div>
+    <div id="profileContent"></div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script>
+// Unregister any old service workers (clears cached old app)
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.getRegistrations().then(regs => {
+    regs.forEach(r => r.unregister());
+  });
+}
+
+// ─── CONFIG ───
+const SUPABASE_URL = "https://frnzvmwzdnczjoshwchg.supabase.co";
+const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZybnp2bXd6ZG5jempvc2h3Y2hnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc3NTA1NDUsImV4cCI6MjA5MzMyNjU0NX0.tC_5-aAS8Kjm_TZbF_lelaTrlw5c4YYe0SEC_XPLC6M";
+const { createClient } = supabase;
+const db = createClient(SUPABASE_URL, SUPABASE_KEY);
+
+// ─── STATE ───
+let currentUser = null;
+let people = [];
+let currentTab = 'journey';
+let addStep = 1;
+let editingId = null;
+let wisdomIndex = 0;
+let wisdomTimer = null;
+
+// Non-negotiable answers stored per-person (key: person id, value: object of answers)
+// Also stored globally for the insights checklist
+let nonnegAnswers = {};
+
+const TOTAL_STEPS = 8; // 1:basics 2:intention 3:non-negotiables 4:yn-questions 5:traits 6:flags 7:status 8:final
+
+// FIX #19: Unique titles per step
+const STEP_TITLES = [
+  "The Basics 📋",
+  "His Intentions 🎯",
+  "My Non‑Negotiables 🚫❤️",
+  "Straightforward Qs 🔍",
+  "What You Feel ⭐",
+  "Flags 🚩💚",
+  "Where Things Stand 📊",
+  "Final Thoughts 💭"
+];
+
+const WISDOM = [
+  "Your future husband is out there eating dinner right now with no idea you exist 💀",
+  "He had potential. Keyword: 'had'.",
+  "The bar was on the floor and he still tripped over it 😭",
+  "You didn't lose him. He lost you. Big difference ❤️",
+  "Not every connection is a sign. Sometimes it's just a lesson with good hair 😂",
+  "He was a vibe check. He failed. Next 😂",
+  "Still loading... please hold. Good things take time 🌸",
+  "Somewhere your person is also tired of this and hoping it ends soon 😭❤️",
+  "He was a chapter, not the book ❤️",
+  "You're not too much. He was just not enough ❤️",
+  "He was sent to teach you something. Lesson learned. Moving on 😌",
+  "Brought to you by another almost 😂"
+];
+
+const MILESTONES = [
+  { min: 0,   max: 0,   label: "Warming up the universe... 🌌" },
+  { min: 1,   max: 20,  label: "The search is officially on ❤️" },
+  { min: 21,  max: 40,  label: "Getting warmer... he's out there 🔍" },
+  { min: 41,  max: 60,  label: "Someone's in your orbit 🪐" },
+  { min: 61,  max: 80,  label: "Connection detected... 💫" },
+  { min: 81,  max: 99,  label: "Almost downloaded... 99% ❤️" },
+  { min: 100, max: 100, label: "Love Loaded. 🌟 You found him!" }
+];
+
+// FIX #15: hyphens instead of dashes, removed bracketed qualifiers
+// FIX #16: removed drinking/smoking/substances (moved to YN tab)
+// FIX #17: removed "does he make you laugh"
+const TRAITS = [
+  "Is he kind and sensitive?",
+  "How mature is he?",
+  "Does he put in real effort?",
+  "Is he consistent - not hot and cold?",
+  "Does he communicate openly?",
+  "How does he handle conflict?",
+  "Does he own his mistakes?",
+  "How empathetic is he?",
+  "Is he emotionally available?",
+  "Does he have a life outside work?",
+  "Physical attraction",
+  "Do you connect intellectually?",
+  "Can you be fully yourself with him?",
+  "Does he energise you or drain you?",
+  "Is he family oriented?",
+  "Is his financial mindset healthy?",
+  "Does he balance career and life well?",
+  "Do your lifestyles and routines match?",
+  "Do your social lives align?",
+  "Do you share interests and passions?",
+  "Are you travel compatible?",
+  "Are you aligned on marriage timeline?",
+  "Are you on the same page about kids?",
+  "Do your values truly align?",
+  "Do you feel safe and respected?"
+];
+
+// FIX #16: Yes/No questions tab (drinking, smoking, substances + other behaviours)
+const YN_QUESTIONS = [
+  { key: "career_goals",   label: "Does he have clear career or life goals?" },
+  { key: "boundaries",     label: "Does he respect boundaries (yours and others')?" },
+  { key: "no_aggression",  label: "Does he handle disagreements without aggression?" },
+  { key: "culture_resp",   label: "Does he respect different cultures or beliefs?" },
+  { key: "drinks",         label: "Does he drink?" },
+  { key: "smokes",         label: "Does he smoke?" },
+  { key: "substances",     label: "Does he use substances?" },
+  { key: "prays",          label: "Does he believe in God?" },
+  { key: "family_close",   label: "Is he close to his family?" },
+  { key: "wants_kids",     label: "Does he want kids?" },
+  { key: "open_comm",      label: "Does he communicate openly without stonewalling?" },
+  { key: "takes_acc",      label: "Does he take accountability for his actions?" },
+  { key: "effort",         label: "Does he put in consistent effort (not just at the start)?" },
+  { key: "laughter",       label: "Does he make you laugh?" }
+];
+
+const HOW_MET = ["Matrimony", "Dating App", "Family", "Friends", "Work", "Universe ✨"];
+
+const INTENTIONS = [
+  { val: "serious",      label: "💍 Serious",     sub: "ready to commit" },
+  { val: "casual",       label: "🌊 Casual",       sub: "" },
+  { val: "not-sure",     label: "🤷 Not sure yet", sub: "" },
+  { val: "says-serious", label: "🌿 Platonic", sub: "feels casual" }
+];
+
+const STATUSES = [
+  { val: "pursue",   label: "✅ Pursue" },
+  { val: "maybe",    label: "🤔 Maybe" },
+  { val: "not-him",  label: "❌ Not Him" },
+  { val: "ghosted",  label: "👻 Ghosted" },
+  { val: "on-pause", label: "⏸️ On Pause" },
+  { val: "red-flag", label: "🚩 Red Flag" },
+  { val: "the-one",  label: "🌟 He's The One!" }
+];
+
+// FIX #18: removed "Calls his mom"
+const GREEN_FLAGS_PRESET = [
+  "Consistent", "Remembers the little things", "Shows up without being asked",
+  "Communicates feelings openly", "Makes me feel safe", "Emotionally mature",
+  "Takes accountability", "Financially responsible", "Respects boundaries",
+  "Has close friendships", "Is kind to strangers", "Never makes me feel small"
+];
+
+const RED_FLAGS_PRESET = [
+  "Hot and cold behaviour", "Love bombing early on", "Avoids serious conversations",
+  "Takes days to reply", "Disrespects others (waiters etc.)", "Makes everything about him",
+  "Dismisses my feelings", "Inconsistent effort", "Jealous or controlling",
+  "Won't define things", "Talks about ex too much", "No accountability ever"
+];
+
+// FIX #20: Non-negotiables as yes/no checklist
+const NONNEG_ITEMS = [
+  { key: "nn1",  label: "Kind & respectful - basically a decent human being" },
+  { key: "nn2",  label: "Emotionally available - like actually available" },
+  { key: "nn3",  label: "Communicates clearly - says what he means, means what he says" },
+  { key: "nn4",  label: "Prioritises love, family, and values" },
+  { key: "nn5",  label: "Knows what he wants from life (and is working towards it)" },
+  { key: "nn6",  label: "Handles money and life responsibly" },
+  { key: "nn7",  label: "Shows up and stays consistently" },
+  { key: "nn8",  label: "Doesn't run from uncomfortable conversations" },
+  { key: "nn9",  label: "Mature and can take accountability" },
+  { key: "nn10", label: "Doesn't leave me confused about where I stand" },
+  { key: "nn11", label: "Values that align, not clash" },
+  { key: "nn12", label: "Treats me right without needing a manual" }
+];
+
+const NICETOHAVE_ITEMS = [
+  { key: "nth1", label: "A connection that flows - not forced" },
+  { key: "nth2", label: "Feels like home" },
+  { key: "nth3", label: "Brings steady love that's calm & doesn't need Tiger balm 😄" },
+  { key: "nth4", label: "Finds joy in the little things" },
+  { key: "nth5", label: "Doesn't take life too seriously (but knows when to)" },
+  { key: "nth6", label: "Can laugh, be silly, and make the ordinary feel special" }
+];
+
+// Current form state
+let form = {};
+
+function resetForm() {
+  form = {
+    name: '', how_met: '', first_impression: '',
+    intention: '', status: '',
+    traits: Array(TRAITS.length).fill(0),
+    yn: {},
+    nonneg: {},
+    green_flags: [], red_flags: [],
+    custom_green: '', custom_red: '',
+    one_liner: '', notes: ''
+  };
+}
+
+// ─── AUTH ───
+async function signInWithGoogle() {
+  const { error } = await db.auth.signInWithOAuth({
+    provider: 'google',
+    options: { redirectTo: window.location.href }
+  });
+  if (error) showToast('Auth error: ' + error.message);
+}
+
+async function signOut() {
+  const menu = document.getElementById('logoutMenu');
+  if (menu) menu.classList.remove('open');
+  try {
+    await db.auth.signOut();
+  } catch(e) { /* ignore */ }
+  // Force a clean reload — clears all in-memory state reliably
+  window.location.reload();
+}
+
+// Wire up avatar toggle and sign-out with stopPropagation so document-level
+// close listener doesn't fire on the same click and immediately re-close the menu.
+(function wireLogout() {
+  function attach() {
+    const avatar = document.getElementById('userAvatar');
+    const menu   = document.getElementById('logoutMenu');
+    const btn    = document.getElementById('signOutBtn');
+    if (!avatar || !menu || !btn) { setTimeout(attach, 50); return; }
+
+    avatar.addEventListener('click', function(e) {
+      e.stopPropagation();
+      menu.classList.toggle('open');
+    });
+
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      signOut();
+    });
+
+    document.addEventListener('click', function() {
+      menu.classList.remove('open');
+    });
+  }
+  attach();
+})();
+
+async function init() {
+  const { data: { session } } = await db.auth.getSession();
+  if (session) {
+    currentUser = session.user;
+    await loadPeople();
+    showApp();
+  } else {
+    document.getElementById('auth-screen').style.display = 'flex';
+  }
+
+  db.auth.onAuthStateChange(async (event, session) => {
+    if (event === 'SIGNED_IN' && session) {
+      currentUser = session.user;
+      await loadPeople();
+      showApp();
+    }
+  });
+}
+
+function showApp() {
+  document.getElementById('auth-screen').style.display = 'none';
+  document.getElementById('app').style.display = 'flex';
+  const av = document.getElementById('userAvatar');
+  if (currentUser.user_metadata?.avatar_url) {
+    av.innerHTML = `<img src="${currentUser.user_metadata.avatar_url}" alt="avatar"/>`;
+  } else {
+    const name = currentUser.user_metadata?.full_name || currentUser.email || '?';
+    av.textContent = name[0].toUpperCase();
+  }
+  switchTab('journey');
+  startWisdom();
+}
+
+// ─── DATA ───
+async function loadPeople() {
+  const { data, error } = await db.from('love_loading_people')
+    .select('*')
+    .eq('user_id', currentUser.id)
+    .order('created_at', { ascending: false });
+  if (!error) people = (data || []).map(r => ({ ...r.payload, id: r.id, _dbId: r.id }));
+}
+
+// FIX #21: Fixed save — pass the DB row id correctly, not the payload id
+async function savePerson(payload) {
+  if (editingId) {
+    const { error } = await db.from('love_loading_people')
+      .update({ payload, updated_at: new Date().toISOString() })
+      .eq('id', editingId)
+      .eq('user_id', currentUser.id);
+    if (error) { showToast('Error saving 😢 ' + error.message); return false; }
+  } else {
+    const { error } = await db.from('love_loading_people')
+      .insert({ user_id: currentUser.id, payload });
+    if (error) { showToast('Error saving 😢 ' + error.message); return false; }
+  }
+  await loadPeople();
+  return true;
+}
+
+function deletePerson(id) {
+  // confirm() is silently blocked in iOS PWA standalone mode — use custom overlay instead
+  showConfirm('Delete this entry? This can\'t be undone 💔', async () => {
+    // Find the person to get the DB row id
+    const person = people.find(p => p.id === id || p._dbId === id);
+    const dbId = person ? (person._dbId || person.id) : id;
+
+    const { error, data } = await db.from('love_loading_people')
+      .delete()
+      .eq('id', dbId)
+      .eq('user_id', currentUser.id)
+      .select();
+    if (error) { showToast('Could not delete 😢 ' + error.message); return; }
+    // Fallback: old entries may be keyed by payload id
+    if (!data || data.length === 0) {
+      const { error: e2 } = await db.from('love_loading_people')
+        .delete()
+        .filter('payload->>id', 'eq', id)
+        .eq('user_id', currentUser.id);
+      if (e2) { showToast('Could not delete 😢 ' + e2.message); return; }
+    }
+    await loadPeople();
+    closeProfileModal();
+    renderCurrentTab();
+    showToast('Deleted. Onwards! 💪');
+  });
+}
+
+function showConfirm(msg, onYes) {
+  // Remove any existing confirm overlay
+  const existing = document.getElementById('confirmOverlay');
+  if (existing) existing.remove();
+
+  const overlay = document.createElement('div');
+  overlay.id = 'confirmOverlay';
+  overlay.style.cssText = 'position:fixed;inset:0;z-index:999;background:rgba(60,20,40,0.55);display:flex;align-items:center;justify-content:center;padding:24px';
+  overlay.innerHTML = `
+    <div style="background:white;border-radius:20px;padding:24px;max-width:320px;width:100%;text-align:center;box-shadow:0 12px 40px rgba(200,80,120,0.25)">
+      <div style="font-size:28px;margin-bottom:12px">💔</div>
+      <div style="font-size:15px;font-weight:700;color:#3a2030;margin-bottom:20px;line-height:1.4">${msg}</div>
+      <div style="display:flex;gap:10px">
+        <button id="confirmNo"  style="flex:1;padding:12px;border-radius:50px;border:2px solid #f9d0db;background:white;font-family:Nunito,sans-serif;font-size:14px;font-weight:800;color:#7a5068;cursor:pointer">Keep 🌸</button>
+        <button id="confirmYes" style="flex:1;padding:12px;border-radius:50px;border:none;background:linear-gradient(135deg,#e8637a,#c94060);font-family:Nunito,sans-serif;font-size:14px;font-weight:800;color:white;cursor:pointer">Delete 🗑️</button>
+      </div>
+    </div>`;
+  document.body.appendChild(overlay);
+
+  document.getElementById('confirmYes').addEventListener('click', () => { overlay.remove(); onYes(); });
+  document.getElementById('confirmNo').addEventListener('click',  () => { overlay.remove(); });
+  overlay.addEventListener('click', e => { if (e.target === overlay) overlay.remove(); });
+}
+
+// ─── TABS ───
+function switchTab(tab) {
+  currentTab = tab;
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + tab).classList.add('active');
+
+  // Update header text per tab
+  const headerText = document.querySelector('.header-logo-text');
+  if (headerText) {
+    if (tab === 'journey') headerText.textContent = 'Love Loading';
+    else if (tab === 'people') headerText.textContent = 'The Running List 📋';
+    else if (tab === 'insights') headerText.textContent = '🧠 My Insights';
+  }
+
+  renderCurrentTab();
+}
+
+function renderCurrentTab() {
+  if (currentTab === 'journey') renderJourney();
+  else if (currentTab === 'people') renderPeople();
+  else renderInsights();
+}
+
+// ─── JOURNEY ───
+function getMilestoneProgress() {
+  const pursuing = people.filter(p => p.status === 'pursue').length;
+  const theOne = people.some(p => p.status === 'the-one');
+  if (theOne) return { pct: 100, label: MILESTONES[6].label };
+  if (people.length === 0) return { pct: 0, label: MILESTONES[0].label };
+  const pct = Math.min(99, Math.round((pursuing / Math.max(people.length, 1)) * 100));
+  const m = MILESTONES.find(m => pct >= m.min && pct <= m.max) || MILESTONES[1];
+  return { pct, label: m.label };
+}
+
+function renderJourney() {
+  const c = document.getElementById('content');
+  const { pct, label } = getMilestoneProgress();
+  const pursuing = people.filter(p => p.status === 'pursue').length;
+  const survived = people.filter(p => ['not-him','ghosted','red-flag'].includes(p.status)).length;
+
+  const scored = people.filter(p => p.traits && p.traits.some(t => t > 0));
+  const withScores = scored.map(p => ({ ...p, score: avgScore(p) })).sort((a,b) => b.score - a.score).slice(0, 5);
+  const patterns = getPatterns();
+
+  let html = '';
+
+  // Always show the dum-biryani line; show "Tap +" prompt only when no entries yet
+  html += `
+    <div class="zero-state" style="padding:28px 20px 8px">
+      <div class="zero-emoji" style="font-size:38px;margin-bottom:10px">❤️</div>
+      <div class="zero-title">He exists. Somewhere. Probably, cooking like slow dum‑biryani 🍲</div>
+      ${people.length === 0 ? '<div style="margin-top:12px" class="zero-sub">Tap + to start logging</div>' : ''}
+    </div>`;
+
+  // FIX #7: "On the way" instead of "Love Progress"
+  html += `
+    <div class="milestone-bar card-sm" style="background:rgba(255,255,255,0.8);border:1px solid var(--card-border);border-radius:16px;padding:16px;margin:12px 16px;">
+      <div class="milestone-label"><span>On the way 💌</span><span>${pct}%</span></div>
+      <div class="milestone-track"><div class="milestone-fill" id="mfill" style="width:0%"></div></div>
+      <div class="milestone-text">${label}</div>
+    </div>`;
+
+  html += `
+    <div class="stats-row">
+      <div class="stat-pill"><div class="stat-num">${people.length}</div><div class="stat-lbl">Talked to</div></div>
+      <div class="stat-pill"><div class="stat-num">✅ ${pursuing}</div><div class="stat-lbl">Pursuing</div></div>
+      <div class="stat-pill"><div class="stat-num">😂 ${survived}</div><div class="stat-lbl">Survived</div></div>
+    </div>`;
+
+  if (withScores.length > 0) {
+    html += `<div class="section-title">🏆 Top Scorers</div><div class="card" style="margin:4px 16px;">`;
+    withScores.forEach(p => {
+      html += `
+        <div class="top-scorer-bar">
+          <div class="tsb-label"><span>${p.name}</span><span>${p.score.toFixed(1)}/5</span></div>
+          <div class="tsb-track"><div class="tsb-fill" style="width:${(p.score/5)*100}%"></div></div>
+        </div>`;
+    });
+    html += `</div>`;
+  }
+
+  if (people.length >= 2 && patterns.length > 0) {
+    html += `<div class="section-title">💡 Pattern Insights</div><div style="margin:0 16px;">`;
+    patterns.forEach(p => {
+      html += `<div class="insight-pill"><span class="insight-icon">${p.icon}</span>${p.text}</div>`;
+    });
+    html += `</div>`;
+  }
+
+  html += `
+    <div class="wisdom-card" id="wisdomCard">
+      <div class="wisdom-text" id="wisdomText">${WISDOM[wisdomIndex]}</div>
+      <div class="wisdom-dots" id="wisdomDots">${WISDOM.map((_,i) => `<div class="wisdom-dot${i===wisdomIndex?' active':''}" onclick="setWisdom(${i})"></div>`).join('')}</div>
+    </div>`;
+
+  c.innerHTML = html;
+  setTimeout(() => {
+    const fill = document.getElementById('mfill');
+    if (fill) fill.style.width = pct + '%';
+  }, 100);
+}
+
+function getPatterns() {
+  if (people.length < 2) return [];
+  const patterns = [];
+  const lowEmot = people.filter(p => p.traits && p.traits[8] > 0 && p.traits[8] <= 2).length;
+  if (lowEmot >= 2) patterns.push({ icon:'💔', text:`${lowEmot} people you logged weren't emotionally available` });
+  const mismatch = people.filter(p => p.intention === 'says-serious' || p.intention === 'casual').length;
+  if (mismatch >= 1) patterns.push({ icon:'⚡', text:`${mismatch} ${mismatch===1?'person':'people'} you logged aren't fully serious` });
+  const sourceCounts = {};
+  people.forEach(p => { if(p.how_met) sourceCounts[p.how_met] = (sourceCounts[p.how_met]||0)+1; });
+  const topSource = Object.entries(sourceCounts).sort((a,b)=>b[1]-a[1])[0];
+  if (topSource && topSource[1] >= 2) patterns.push({ icon:'📱', text:`Most connections from ${topSource[0]}` });
+  const allRed = people.flatMap(p => p.red_flags || []);
+  if (allRed.length >= 3) patterns.push({ icon:'🚩', text:`${allRed.length} red flags logged across everyone` });
+  return patterns;
+}
+
+function startWisdom() {
+  if (wisdomTimer) clearInterval(wisdomTimer);
+  wisdomTimer = setInterval(() => {
+    wisdomIndex = (wisdomIndex + 1) % WISDOM.length;
+    const wt = document.getElementById('wisdomText');
+    const wd = document.getElementById('wisdomDots');
+    if (wt) { wt.style.opacity = 0; setTimeout(() => { wt.textContent = WISDOM[wisdomIndex]; wt.style.opacity = 1; }, 300); }
+    if (wd) wd.innerHTML = WISDOM.map((_,i) => `<div class="wisdom-dot${i===wisdomIndex?' active':''}" onclick="setWisdom(${i})"></div>`).join('');
+  }, 5000);
+}
+
+function setWisdom(i) {
+  wisdomIndex = i;
+  const wt = document.getElementById('wisdomText');
+  const wd = document.getElementById('wisdomDots');
+  if (wt) wt.textContent = WISDOM[i];
+  if (wd) wd.innerHTML = WISDOM.map((_,i2) => `<div class="wisdom-dot${i2===i?' active':''}" onclick="setWisdom(${i2})"></div>`).join('');
+}
+
+// ─── PEOPLE ───
+let currentFilter = 'all';
+
+function renderPeople() {
+  const c = document.getElementById('content');
+  const filters = [
+    { val:'all',      label:'📋 All' },
+    { val:'pursue',   label:'✅ Pursue' },
+    { val:'maybe',    label:'🤔 Maybe' },
+    { val:'not-him',  label:'❌ Not Him' },
+    { val:'ghosted',  label:'👻 Ghosted' }
+  ];
+
+  let filtered = currentFilter === 'all' ? people : people.filter(p => p.status === currentFilter);
+
+  let html = `
+    <div class="page-title">👥 Your People</div>
+    <div class="page-subtitle">Everyone you've logged on this search ✨</div>
+    <div class="filter-scroll">`;
+  filters.forEach(f => {
+    html += `<button class="filter-chip${currentFilter===f.val?' active':''}" onclick="setFilter('${f.val}')">${f.label}</button>`;
+  });
+  html += `</div>`;
+
+  if (filtered.length === 0) {
+    html += `<div class="empty-people"><div class="big">🌸</div>${currentFilter==='all'?'No one logged yet. Tap + to add the first one!':'No one in this category yet.'}</div>`;
+  } else {
+    filtered.forEach(p => {
+      const score = avgScore(p);
+      const risk = calcRisk(p);
+      const initials = (p.name || '?')[0].toUpperCase();
+      const statusLabel = STATUSES.find(s => s.val === p.status)?.label || '🤔 Maybe';
+      const statusCls = 'status-' + (p.status || 'maybe');
+      const isMismatch = p.intention === 'says-serious' || p.intention === 'casual';
+      const isHighRisk = risk > 50;
+
+      html += `
+        <div class="person-card ${p.status||'maybe'}" onclick="openProfile('${p.id}')">
+          <div class="person-avatar">
+            ${score > 0 ? `<svg style="position:absolute;inset:-4px;width:66px;height:66px;overflow:visible" viewBox="0 0 58 58"><circle cx="29" cy="29" r="25" fill="none" stroke="#f0d0d8" stroke-width="3"/><circle cx="29" cy="29" r="25" fill="none" stroke="#e8637a" stroke-width="3" stroke-dasharray="${(score/5)*157} 157" stroke-dashoffset="39" stroke-linecap="round" transform="rotate(-90 29 29)"/></svg>` : ''}
+            ${initials}
+          </div>
+          <div class="person-info">
+            <div class="person-name">${p.name || 'Unknown'}</div>
+            <div class="person-meta">${p.how_met || ''} ${score > 0 ? '· ' + score.toFixed(1) + '/5 ⭐' : ''}</div>
+            <div class="person-badges">
+              ${isMismatch ? `<span class="badge badge-mismatch">⚡ Mismatch</span>` : ''}
+              ${isHighRisk ? `<span class="badge badge-risk">⚠️ High Risk</span>` : ''}
+              ${p.status === 'the-one' ? `<span class="badge badge-theone">🌟 The One!</span>` : ''}
+            </div>
+          </div>
+          <div class="${statusCls} status-pill">${statusLabel}</div>
+        </div>`;
+    });
+  }
+
+  c.innerHTML = html;
+}
+
+function setFilter(f) {
+  currentFilter = f;
+  renderPeople();
+}
+
+function avgScore(p) {
+  if (!p.traits || !p.traits.some(t => t > 0)) return 0;
+  const rated = p.traits.filter(t => t > 0);
+  return rated.reduce((a,b) => a+b, 0) / rated.length;
+}
+
+function calcRisk(p) {
+  const redCount = (p.red_flags || []).length;
+  const lowTraits = p.traits ? p.traits.filter(t => t > 0 && t <= 2).length : 0;
+  return Math.min(100, (redCount * 12) + (lowTraits * 8));
+}
+
+function riskColor(risk) {
+  if (risk < 30) return 'risk-green';
+  if (risk < 60) return 'risk-amber';
+  return 'risk-red';
+}
+
+// ─── PROFILE VIEW ───
+function openProfile(id) {
+  const p = people.find(x => x.id === id);
+  if (!p) return;
+  const score = avgScore(p);
+  const risk = calcRisk(p);
+  const statusLabel = STATUSES.find(s => s.val === p.status)?.label || '';
+  const intentionLabel = INTENTIONS.find(i => i.val === p.intention)?.label || '';
+
+  let html = `
+    <div class="profile-header">
+      <div class="profile-avatar">${(p.name||'?')[0].toUpperCase()}</div>
+      <div class="profile-name">${p.name}</div>
+      <div class="profile-meta">${p.how_met || ''} · ${statusLabel}</div>
+    </div>
+    <div class="score-compat">
+      <div class="score-box">
+        <div class="score-big" style="color:var(--rose)">${score > 0 ? score.toFixed(1)+'/5' : '—'}</div>
+        <div class="score-lbl">Compatibility ⭐</div>
+      </div>
+      <div class="score-box">
+        <div class="score-big ${riskColor(risk)}">${risk}%</div>
+        <div class="score-lbl">Risk Level ${risk < 30 ? '💚' : risk < 60 ? '🟡' : '🔴'}</div>
+      </div>
+    </div>`;
+
+  if (intentionLabel) {
+    html += `<div class="info-tags"><span class="info-tag">${intentionLabel}</span></div>`;
+  }
+
+  if (p.first_impression) {
+    html += `<div class="first-impression"><div class="quote-box">"${p.first_impression}"</div></div>`;
+  }
+
+  // YN answers
+  if (p.yn && Object.keys(p.yn).length > 0) {
+    html += `<div class="section-title" style="margin:12px 16px 4px">🔍 Quick Facts</div>`;
+    html += `<div style="margin:0 16px;display:flex;flex-wrap:wrap;gap:8px;margin-bottom:8px">`;
+    YN_QUESTIONS.forEach(q => {
+      const val = p.yn[q.key];
+      if (val !== undefined) {
+        html += `<span class="info-tag" style="background:${val?'var(--green-bg)':'var(--red-bg)'};color:${val?'#2d8a5a':'var(--red)'}">${q.label.split('?')[0]} ${val?'✓':'✗'}</span>`;
+      }
+    });
+    html += `</div>`;
+  }
+
+  const ratedTraits = TRAITS.map((t, i) => ({ name: t, val: p.traits?.[i] || 0 })).filter(t => t.val > 0);
+  if (ratedTraits.length > 0) {
+    html += `<div class="section-title" style="margin:12px 16px 4px">⭐ Ratings</div>`;
+    html += `<div class="traits-section">`;
+    ratedTraits.forEach(t => {
+      const stars = '★'.repeat(t.val) + '☆'.repeat(5 - t.val);
+      html += `<div class="trait-detail">
+        <div class="trait-detail-name">${t.name}</div>
+        <div class="trait-stars">${stars}</div>
+      </div>`;
+    });
+    html += `</div>`;
+  }
+
+  const gf = p.green_flags || [];
+  const rf = p.red_flags || [];
+  if (gf.length > 0 || rf.length > 0) {
+    html += `<div class="flags-section">`;
+    if (gf.length > 0) {
+      html += `<div class="flags-col"><div class="flags-title">💚 Green Flags</div>`;
+      gf.forEach(f => html += `<div style="font-size:12px;font-weight:700;color:#2d8a5a;margin:4px 0">✓ ${f}</div>`);
+      html += `</div>`;
+    }
+    if (rf.length > 0) {
+      html += `<div class="flags-col"><div class="flags-title">🚩 Red Flags</div>`;
+      rf.forEach(f => html += `<div style="font-size:12px;font-weight:700;color:var(--red);margin:4px 0">✗ ${f}</div>`);
+      html += `</div>`;
+    }
+    html += `</div>`;
+  }
+
+  if (p.one_liner) {
+    html += `<div style="margin:8px 16px"><div class="section-title" style="margin:4px 0 6px">💭 The Vibe</div>`;
+    html += `<div class="quote-box">${p.one_liner}</div></div>`;
+  }
+  if (p.notes) {
+    html += `<div style="margin:8px 16px"><div class="section-title" style="margin:4px 0 6px">📝 Notes</div>`;
+    html += `<div style="font-size:13px;font-weight:600;color:var(--text2);line-height:1.6">${p.notes}</div></div>`;
+  }
+
+  html += `<div style="padding:16px">
+    <button class="btn-full" onclick="openEditModal('${id}')">✏️ Edit</button>
+    <button class="btn-danger" onclick="deletePerson('${id}')">🗑️ Delete</button>
+  </div>`;
+
+  document.getElementById('profileContent').innerHTML = html;
+  document.getElementById('profileModal').classList.add('open');
+}
+
+function closeProfileModal() {
+  document.getElementById('profileModal').classList.remove('open');
+}
+
+// ─── INSIGHTS ───
+function renderInsights() {
+  const c = document.getElementById('content');
+
+  const metCounts = {};
+  HOW_MET.forEach(h => metCounts[h] = 0);
+  people.forEach(p => { if(p.how_met) metCounts[p.how_met] = (metCounts[p.how_met]||0)+1; });
+  const metMax = Math.max(...Object.values(metCounts), 1);
+
+  const allRed = people.flatMap(p => p.red_flags || []);
+  const redCounts = {};
+  allRed.forEach(f => redCounts[f] = (redCounts[f]||0)+1);
+  const topRed = Object.entries(redCounts).sort((a,b)=>b[1]-a[1]).slice(0,5);
+
+  const allGreen = people.flatMap(p => p.green_flags || []);
+  const greenCounts = {};
+  allGreen.forEach(f => greenCounts[f] = (greenCounts[f]||0)+1);
+  const topGreen = Object.entries(greenCounts).sort((a,b)=>b[1]-a[1]).slice(0,5);
+
+  let html = `
+    <div class="page-title">🧠 My Insights</div>
+    <div class="page-subtitle">Patterns & data from everyone you've logged ✨</div>`;
+
+  html += `<div class="section-title">📊 How We Met</div><div class="card">`;
+  Object.entries(metCounts).filter(([,v])=>v>0).forEach(([k,v]) => {
+    html += `<div class="bc-row">
+      <div class="bc-label">${k}</div>
+      <div class="bc-track"><div class="bc-fill" style="width:${(v/metMax)*100}%"></div></div>
+      <div class="bc-count">${v}</div>
+    </div>`;
+  });
+  if (!Object.values(metCounts).some(v=>v>0)) html += `<div style="color:var(--text3);font-size:13px;font-weight:600;text-align:center;padding:12px">No data yet 🌸</div>`;
+  html += `</div>`;
+
+  if (topRed.length > 0) {
+    html += `<div class="section-title">🚩 Red Flag Patterns</div><div class="card">`;
+    const rm = topRed[0][1];
+    topRed.forEach(([f,v]) => {
+      html += `<div class="bc-row">
+        <div class="bc-label" style="color:var(--red)">${f}</div>
+        <div class="bc-track"><div class="bc-fill" style="width:${(v/rm)*100}%;background:linear-gradient(90deg,#f9c0c8,var(--red))"></div></div>
+        <div class="bc-count" style="color:var(--red)">${v}</div>
+      </div>`;
+    });
+    html += `</div>`;
+  }
+
+  if (topGreen.length > 0) {
+    html += `<div class="section-title">💚 Green Flag Patterns</div><div class="card">`;
+    const gm = topGreen[0][1];
+    topGreen.forEach(([f,v]) => {
+      html += `<div class="bc-row">
+        <div class="bc-label" style="color:#2d8a5a">${f}</div>
+        <div class="bc-track"><div class="bc-fill" style="width:${(v/gm)*100}%;background:linear-gradient(90deg,#a8e6c0,#2d8a5a)"></div></div>
+        <div class="bc-count" style="color:#2d8a5a">${v}</div>
+      </div>`;
+    });
+    html += `</div>`;
+  }
+
+  // Compatibility meter: average score across all logged people
+  if (people.length > 0) {
+    const scoredAll = people.filter(p => p.traits && p.traits.some(t => t > 0));
+    const overallAvg = scoredAll.length > 0
+      ? scoredAll.reduce((sum, p) => sum + avgScore(p), 0) / scoredAll.length
+      : 0;
+    const pct = Math.round((overallAvg / 5) * 100);
+    const statusBreakdown = STATUSES.map(s => ({
+      label: s.label,
+      count: people.filter(p => p.status === s.val).length
+    })).filter(s => s.count > 0);
+
+    html += `<div class="section-title">📊 Where Things Stand</div><div class="card">`;
+    statusBreakdown.forEach(s => {
+      html += `<div class="bc-row">
+        <div class="bc-label">${s.label}</div>
+        <div class="bc-track"><div class="bc-fill" style="width:${(s.count/people.length)*100}%"></div></div>
+        <div class="bc-count">${s.count}</div>
+      </div>`;
+    });
+    html += `</div>`;
+
+    if (overallAvg > 0) {
+      html += `<div class="section-title">💘 Compatibility Meter</div>`;
+      html += `<div class="card" style="text-align:center;padding:20px 16px">
+        <div style="font-size:38px;font-weight:900;color:var(--rose)">${overallAvg.toFixed(1)}<span style="font-size:18px;color:var(--text3)">/5</span></div>
+        <div style="font-size:12px;color:var(--text3);font-weight:700;margin:4px 0 12px">Average across ${scoredAll.length} rated ${scoredAll.length===1?'person':'people'}</div>
+        <div style="height:12px;background:var(--blush);border-radius:8px;overflow:hidden">
+          <div style="height:100%;width:${pct}%;background:linear-gradient(90deg,var(--rose-light),var(--rose));border-radius:8px;transition:width 1s ease"></div>
+        </div>
+      </div>`;
+    }
+  }
+
+  c.innerHTML = html;
+}
+
+function setNonneg(key, val) {
+  nonnegAnswers[key] = val;
+}
+
+// ─── ADD / EDIT MODAL ───
+
+function openAddModal() {
+  editingId = null;
+  resetForm();
+  addStep = 1;
+  document.getElementById('addModal').classList.add('open');
+  renderStep();
+}
+
+function openEditModal(id) {
+  closeProfileModal();
+  const p = people.find(x => x.id === id);
+  if (!p) return;
+  editingId = id;
+  form = {
+    name: p.name || '',
+    how_met: p.how_met || '',
+    first_impression: p.first_impression || '',
+    intention: p.intention || '',
+    status: p.status || '',
+    traits: p.traits ? [...p.traits] : Array(TRAITS.length).fill(0),
+    yn: p.yn ? { ...p.yn } : {},
+    nonneg: p.nonneg ? { ...p.nonneg } : {},
+    green_flags: p.green_flags ? [...p.green_flags] : [],
+    red_flags: p.red_flags ? [...p.red_flags] : [],
+    custom_green: '',
+    custom_red: '',
+    one_liner: p.one_liner || '',
+    notes: p.notes || ''
+  };
+  addStep = 1;
+  document.getElementById('addModal').classList.add('open');
+  renderStep();
+}
+
+function closeAddModal() {
+  document.getElementById('addModal').classList.remove('open');
+  renderCurrentTab();
+}
+
+function renderStepIndicator() {
+  const html = Array.from({length: TOTAL_STEPS}, (_, i) => {
+    const cls = i + 1 === addStep ? 'active' : i + 1 < addStep ? 'done' : '';
+    return `<div class="step-dot ${cls}"></div>`;
+  }).join('');
+  document.getElementById('stepIndicator').innerHTML = html;
+}
+
+function renderStep() {
+  renderStepIndicator();
+  document.getElementById('modalTitle').textContent = STEP_TITLES[addStep - 1];
+
+  const body = document.getElementById('modalBody');
+
+  // STEP 1: Basics
+  if (addStep === 1) {
+    body.innerHTML = `
+      <div class="form-group">
+        <label class="form-label">Name</label>
+        <input class="form-input" id="f-name" placeholder="What do you call him?" value="${escHtml(form.name)}"/>
+      </div>
+      <div class="form-group">
+        <label class="form-label">How did you meet?</label>
+        <div class="option-grid cols3" id="howMetGrid">
+          ${HOW_MET.map(h => `<button type="button" class="option-btn${form.how_met===h?' selected':''}" data-howmet="${escAttr(h)}">${h}</button>`).join('')}
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">First impression ✨</label>
+        <textarea class="form-input form-textarea" id="f-fi" placeholder="What was the vibe when you first met?">${escHtml(form.first_impression)}</textarea>
+      </div>
+      <div class="step-nav">
+        <button type="button" class="btn-next" id="nextBtn1">Next →</button>
+      </div>`;
+
+    document.querySelectorAll('#howMetGrid .option-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        form.how_met = btn.dataset.howmet;
+        document.querySelectorAll('#howMetGrid .option-btn').forEach(b => b.classList.remove('selected'));
+        btn.classList.add('selected');
+      });
+    });
+
+    document.getElementById('nextBtn1').addEventListener('click', () => {
+      syncStep1(); nextStep();
+    });
+  }
+
+  // STEP 2: Intention
+  else if (addStep === 2) {
+    body.innerHTML = `
+      <div class="form-group">
+        <label class="form-label">His intention 💍</label>
+        <div class="option-grid cols2" id="intentionGrid">
+          ${INTENTIONS.map(i => `<button type="button" class="option-btn${form.intention===i.val?' selected':''}" data-val="${i.val}">${i.label}</button>`).join('')}
+        </div>
+        <div class="intention-warning" id="intentWarn" style="${['casual','says-serious'].includes(form.intention)?'display:block':'display:none'}">
+          💛 Just a gentle reminder — you're looking for something serious ❤️ Still worth logging, just go in clear-eyed!
+        </div>
+      </div>
+      <div class="step-nav">
+        <button type="button" class="btn-back" id="backBtn2">← Back</button>
+        <button type="button" class="btn-next" id="nextBtn2">Next →</button>
+      </div>`;
+
+    document.querySelectorAll('#intentionGrid .option-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        form.intention = btn.dataset.val;
+        document.querySelectorAll('#intentionGrid .option-btn').forEach(b => b.classList.remove('selected'));
+        btn.classList.add('selected');
+        const w = document.getElementById('intentWarn');
+        if (w) w.style.display = ['casual','says-serious'].includes(form.intention) ? 'block' : 'none';
+      });
+    });
+    document.getElementById('backBtn2').addEventListener('click', prevStep);
+    document.getElementById('nextBtn2').addEventListener('click', nextStep);
+  }
+
+  // STEP 3: My Non-Negotiables
+  else if (addStep === 3) {
+    body.innerHTML = `
+      <div class="nonneg-section-title" style="font-size:14px;font-weight:900;color:var(--rose-dark);margin-bottom:8px">Must‑Haves <span style="font-weight:600;font-size:12px;color:var(--text3)">(aka bare minimum)</span></div>
+      <div class="yn-list" id="nnList">
+        ${NONNEG_ITEMS.map(item => `
+          <div class="yn-row">
+            <div class="yn-label">${item.label}</div>
+            <div class="yn-btns">
+              <button type="button" class="yn-btn yes${form.nonneg&&form.nonneg[item.key]===true?' active':''}" data-key="${item.key}" data-yn="yes">Yayy 🌸</button>
+              <button type="button" class="yn-btn no${form.nonneg&&form.nonneg[item.key]===false?' active':''}" data-key="${item.key}" data-yn="no">Nay 🌵</button>
+            </div>
+          </div>`).join('')}
+      </div>
+      <div class="nonneg-section-title" style="font-size:14px;font-weight:900;color:var(--rose-dark);margin:16px 0 8px">Nice‑to‑Haves ✨ <span style="font-weight:600;font-size:12px;color:var(--text3)">(aka brownie points)</span></div>
+      <div class="yn-list" id="nthList">
+        ${NICETOHAVE_ITEMS.map(item => `
+          <div class="yn-row">
+            <div class="yn-label">${item.label}</div>
+            <div class="yn-btns">
+              <button type="button" class="yn-btn yes${form.nonneg&&form.nonneg[item.key]===true?' active':''}" data-key="${item.key}" data-yn="yes">Yayy 🌸</button>
+              <button type="button" class="yn-btn no${form.nonneg&&form.nonneg[item.key]===false?' active':''}" data-key="${item.key}" data-yn="no">Nay 🌵</button>
+            </div>
+          </div>`).join('')}
+      </div>
+      <div class="step-nav">
+        <button type="button" class="btn-back" id="backBtn3">← Back</button>
+        <button type="button" class="btn-next" id="nextBtn3">Next →</button>
+      </div>`;
+
+    document.querySelectorAll('#nnList .yn-btn, #nthList .yn-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const key = btn.dataset.key;
+        const val = btn.dataset.yn === 'yes';
+        if (!form.nonneg) form.nonneg = {};
+        form.nonneg[key] = val;
+        document.querySelectorAll(`[data-key="${key}"]`).forEach(b => {
+          b.classList.remove('active');
+          if ((b.dataset.yn === 'yes' && val) || (b.dataset.yn === 'no' && !val)) b.classList.add('active');
+        });
+      });
+    });
+    document.getElementById('backBtn3').addEventListener('click', prevStep);
+    document.getElementById('nextBtn3').addEventListener('click', nextStep);
+  }
+
+  // STEP 4: Straightforward Qs (Yes/No)
+  else if (addStep === 4) {
+    body.innerHTML = `
+      <div style="font-size:13px;color:var(--text3);font-weight:600;margin-bottom:12px">Quick yes/no - you'll thank yourself later 📋</div>
+      <div class="yn-list" id="ynList">
+        ${YN_QUESTIONS.map(q => `
+          <div class="yn-row">
+            <div class="yn-label">${q.label}</div>
+            <div class="yn-btns">
+              <button type="button" class="yn-btn yes${form.yn[q.key]===true?' active':''}" data-key="${q.key}" data-yn="yes">✓</button>
+              <button type="button" class="yn-btn no${form.yn[q.key]===false?' active':''}" data-key="${q.key}" data-yn="no">✗</button>
+            </div>
+          </div>`).join('')}
+      </div>
+      <div class="step-nav">
+        <button type="button" class="btn-back" id="backBtn4">← Back</button>
+        <button type="button" class="btn-next" id="nextBtn4">Next →</button>
+      </div>`;
+
+    document.querySelectorAll('#ynList .yn-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const key = btn.dataset.key;
+        const val = btn.dataset.yn === 'yes';
+        form.yn[key] = val;
+        document.querySelectorAll(`[data-key="${key}"]`).forEach(b => {
+          b.classList.remove('active');
+          if ((b.dataset.yn === 'yes' && val) || (b.dataset.yn === 'no' && !val)) b.classList.add('active');
+        });
+      });
+    });
+    document.getElementById('backBtn4').addEventListener('click', prevStep);
+    document.getElementById('nextBtn4').addEventListener('click', nextStep);
+  }
+
+  // STEP 5: Soul-O-Meter (Traits rating)
+  else if (addStep === 5) {
+    body.innerHTML = `
+      <div style="font-size:13px;color:var(--text3);font-weight:600;margin-bottom:12px">Honest thoughts - straight from your 💗</div>
+      <div class="trait-list" id="traitList">
+        ${TRAITS.map((t, i) => `
+          <div class="trait-row">
+            <div class="trait-name">${t}</div>
+            <div class="star-row" id="stars-${i}">
+              ${[1,2,3,4,5].map(s => `<span class="star${form.traits[i]>=s?' filled':''}" data-trait="${i}" data-val="${s}">★</span>`).join('')}
+            </div>
+          </div>`).join('')}
+      </div>
+      <div class="step-nav">
+        <button type="button" class="btn-back" id="backBtn5">← Back</button>
+        <button type="button" class="btn-next" id="nextBtn5">Next →</button>
+      </div>`;
+
+    document.querySelectorAll('.star').forEach(star => {
+      star.addEventListener('click', () => {
+        const i = parseInt(star.dataset.trait);
+        const v = parseInt(star.dataset.val);
+        form.traits[i] = v;
+        document.querySelectorAll(`#stars-${i} .star`).forEach((s, idx) => {
+          s.classList.toggle('filled', idx < v);
+        });
+      });
+    });
+    document.getElementById('backBtn5').addEventListener('click', prevStep);
+    document.getElementById('nextBtn5').addEventListener('click', nextStep);
+  }
+
+  // STEP 6: Flags
+  else if (addStep === 6) {
+    body.innerHTML = `
+      <div class="form-group">
+        <label class="form-label">💚 Green Flags</label>
+        <div class="flag-tags" id="greenFlagTags">
+          ${GREEN_FLAGS_PRESET.map(f => `<div class="flag-tag green${form.green_flags.includes(f)?' selected':''}" data-flag="${escAttr(f)}" data-type="green">${f}</div>`).join('')}
+        </div>
+        <div style="display:flex;gap:8px;margin-top:10px">
+          <input class="form-input" id="cg" placeholder="Add your own..." style="flex:1" value="${escHtml(form.custom_green)}"/>
+          <button type="button" class="btn-next" style="flex:0;padding:10px 14px;border-radius:12px" id="addGreenBtn">+</button>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">🚩 Red Flags</label>
+        <div class="flag-tags" id="redFlagTags">
+          ${RED_FLAGS_PRESET.map(f => `<div class="flag-tag red${form.red_flags.includes(f)?' selected':''}" data-flag="${escAttr(f)}" data-type="red">${f}</div>`).join('')}
+        </div>
+        <div style="display:flex;gap:8px;margin-top:10px">
+          <input class="form-input" id="cr" placeholder="Add your own..." style="flex:1" value="${escHtml(form.custom_red)}"/>
+          <button type="button" class="btn-next" style="flex:0;padding:10px 14px;border-radius:12px;background:var(--red)" id="addRedBtn">+</button>
+        </div>
+      </div>
+      <div class="step-nav">
+        <button type="button" class="btn-back" id="backBtn6">← Back</button>
+        <button type="button" class="btn-next" id="nextBtn6">Next →</button>
+      </div>`;
+
+    document.querySelectorAll('#greenFlagTags .flag-tag').forEach(tag => {
+      tag.addEventListener('click', () => {
+        const f = tag.dataset.flag;
+        const idx = form.green_flags.indexOf(f);
+        if (idx === -1) { form.green_flags.push(f); tag.classList.add('selected'); }
+        else { form.green_flags.splice(idx, 1); tag.classList.remove('selected'); }
+      });
+    });
+    document.querySelectorAll('#redFlagTags .flag-tag').forEach(tag => {
+      tag.addEventListener('click', () => {
+        const f = tag.dataset.flag;
+        const idx = form.red_flags.indexOf(f);
+        if (idx === -1) { form.red_flags.push(f); tag.classList.add('selected'); }
+        else { form.red_flags.splice(idx, 1); tag.classList.remove('selected'); }
+      });
+    });
+    document.getElementById('cg').addEventListener('input', e => form.custom_green = e.target.value);
+    document.getElementById('cr').addEventListener('input', e => form.custom_red = e.target.value);
+    document.getElementById('addGreenBtn').addEventListener('click', () => addCustomFlag('green'));
+    document.getElementById('addRedBtn').addEventListener('click', () => addCustomFlag('red'));
+    document.getElementById('backBtn6').addEventListener('click', prevStep);
+    document.getElementById('nextBtn6').addEventListener('click', nextStep);
+  }
+
+  // STEP 7: Where Things Stand (Status)
+  else if (addStep === 7) {
+    body.innerHTML = `
+      <div class="form-group">
+        <label class="form-label">Where do things stand right now? 🌸</label>
+        <div class="option-grid cols2" id="statusGrid">
+          ${STATUSES.map(s => `<button type="button" class="option-btn${form.status===s.val?' selected':''}" data-val="${s.val}">${s.label}</button>`).join('')}
+        </div>
+      </div>
+      <div class="step-nav">
+        <button type="button" class="btn-back" id="backBtn7">← Back</button>
+        <button type="button" class="btn-next" id="nextBtn7">Next →</button>
+      </div>`;
+
+    document.querySelectorAll('#statusGrid .option-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        form.status = btn.dataset.val;
+        document.querySelectorAll('#statusGrid .option-btn').forEach(b => b.classList.remove('selected'));
+        btn.classList.add('selected');
+      });
+    });
+    document.getElementById('backBtn7').addEventListener('click', prevStep);
+    document.getElementById('nextBtn7').addEventListener('click', nextStep);
+  }
+
+  // STEP 8: Final Thoughts
+  else if (addStep === 8) {
+    body.innerHTML = `
+      <div class="form-group">
+        <label class="form-label">How does he make you feel in one line? 💭</label>
+        <input class="form-input" id="f-ol" placeholder="The vibe in one sentence..." value="${escHtml(form.one_liner)}"/>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Anything else you want to remember? 📝</label>
+        <textarea class="form-input form-textarea" id="f-notes" placeholder="Context, feelings, anything you want to keep...">${escHtml(form.notes)}</textarea>
+      </div>
+      <div class="step-nav">
+        <button type="button" class="btn-back" id="backBtn8">← Back</button>
+        <button type="button" class="btn-next" id="saveBtn" style="background:linear-gradient(135deg,#6dbf8a,#2d8a5a)">Save 💾</button>
+      </div>`;
+
+    document.getElementById('backBtn8').addEventListener('click', prevStep);
+    document.getElementById('saveBtn').addEventListener('click', submitForm);
+  }
+}
+
+function syncStep1() {
+  const nameEl = document.getElementById('f-name');
+  if (nameEl) form.name = nameEl.value;
+  const fiEl = document.getElementById('f-fi');
+  // FIX #10: ensure first impression is always read from textarea
+  if (fiEl) form.first_impression = fiEl.value;
+}
+
+function addCustomFlag(type) {
+  const val = type === 'green' ? form.custom_green.trim() : form.custom_red.trim();
+  if (!val) return;
+  const arr = type === 'green' ? form.green_flags : form.red_flags;
+  if (!arr.includes(val)) arr.push(val);
+  if (type === 'green') form.custom_green = ''; else form.custom_red = '';
+  renderStep();
+}
+
+function nextStep() {
+  // Always sync text fields before advancing
+  const nameEl = document.getElementById('f-name');
+  if (nameEl) form.name = nameEl.value;
+  const fiEl = document.getElementById('f-fi');
+  if (fiEl) form.first_impression = fiEl.value;
+
+  if (addStep === 1 && !form.name.trim()) { showToast('Add a name first 💕'); return; }
+  if (addStep < TOTAL_STEPS) { addStep++; renderStep(); }
+}
+
+function prevStep() {
+  if (addStep > 1) { addStep--; renderStep(); }
+}
+
+async function submitForm() {
+  const olEl = document.getElementById('f-ol');
+  if (olEl) form.one_liner = olEl.value;
+  const notesEl = document.getElementById('f-notes');
+  if (notesEl) form.notes = notesEl.value;
+
+  if (!form.name.trim()) { showToast('Name is required 💕'); return; }
+
+  // FIX #21: payload id for new records uses timestamp; editingId is the DB row id
+  const payloadId = editingId || Date.now().toString();
+  const payload = {
+    id: payloadId,
+    name: form.name.trim(),
+    how_met: form.how_met,
+    first_impression: form.first_impression,
+    intention: form.intention,
+    status: form.status,
+    traits: form.traits,
+    yn: form.yn,
+    nonneg: form.nonneg || {},
+    green_flags: form.green_flags,
+    red_flags: form.red_flags,
+    one_liner: form.one_liner,
+    notes: form.notes
+  };
+
+  const saveBtn = document.getElementById('saveBtn');
+  if (saveBtn) { saveBtn.disabled = true; saveBtn.textContent = 'Saving...'; }
+
+  const ok = await savePerson(payload);
+  if (ok) {
+    closeAddModal();
+    showToast(editingId ? 'Updated! ✨' : 'Logged! 🌸 The search continues...');
+  } else {
+    if (saveBtn) { saveBtn.disabled = false; saveBtn.textContent = 'Save 💾'; }
+  }
+}
+
+// ─── HELPERS ───
+function escHtml(s) {
+  return (s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+function escAttr(s) {
+  return (s || '').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+}
+
+// ─── TOAST ───
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 3000);
+}
+
+// ─── BOOT ───
+init();
+
+// Service worker registration removed — using standalone HTML
+</script>
+</body>
+</html>
