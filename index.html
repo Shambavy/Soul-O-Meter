@@ -567,7 +567,7 @@ html, body {
 
 /* ─── DROPDOWN ─── */
 .logout-menu {
-  position: absolute; top: 60px; right: 16px; z-index: 300;
+  position: absolute; top: calc(100% + 8px); right: 0; z-index: 300;
   background: white; border-radius: 16px; box-shadow: var(--shadow);
   border: 1px solid var(--blush); overflow: hidden; min-width: 160px; display: none;
 }
@@ -975,9 +975,8 @@ async function signOut() {
   window.location.reload();
 }
 
-// Wire up avatar toggle and sign-out with stopPropagation so document-level
-// close listener doesn't fire on the same click and immediately re-close the menu.
-(function wireLogout() {
+// Wire up avatar toggle and sign-out
+document.addEventListener('DOMContentLoaded', function() {
   function attach() {
     const avatar = document.getElementById('userAvatar');
     const menu   = document.getElementById('logoutMenu');
@@ -999,7 +998,7 @@ async function signOut() {
     });
   }
   attach();
-})();
+});
 
 async function init() {
   const { data: { session } } = await db.auth.getSession();
@@ -1265,8 +1264,6 @@ function renderPeople() {
   let filtered = currentFilter === 'all' ? people : people.filter(p => p.status === currentFilter);
 
   let html = `
-    <div class="page-title">👥 Your People</div>
-    <div class="page-subtitle">Everyone you've logged on this search ✨</div>
     <div class="filter-scroll">`;
   filters.forEach(f => {
     html += `<button class="filter-chip${currentFilter===f.val?' active':''}" onclick="setFilter('${f.val}')">${f.label}</button>`;
@@ -1451,8 +1448,7 @@ function renderInsights() {
   const topGreen = Object.entries(greenCounts).sort((a,b)=>b[1]-a[1]).slice(0,5);
 
   let html = `
-    <div class="page-title">🧠 My Insights</div>
-    <div class="page-subtitle">Patterns & data from everyone you've logged ✨</div>`;
+    <div class="page-subtitle" style="padding-top:12px">Patterns & data from everyone you've logged ✨</div>`;
 
   html += `<div class="section-title">📊 How We Met</div><div class="card">`;
   Object.entries(metCounts).filter(([,v])=>v>0).forEach(([k,v]) => {
@@ -1625,7 +1621,6 @@ function renderStep() {
   else if (addStep === 2) {
     body.innerHTML = `
       <div class="form-group">
-        <label class="form-label">His intention 💍</label>
         <div class="option-grid cols2" id="intentionGrid">
           ${INTENTIONS.map(i => `<button type="button" class="option-btn${form.intention===i.val?' selected':''}" data-val="${i.val}">${i.label}</button>`).join('')}
         </div>
