@@ -980,28 +980,30 @@ async function signOut() {
 }
 
 // Wire up avatar toggle and sign-out
-document.addEventListener('DOMContentLoaded', function() {
-  function attach() {
-    const avatar = document.getElementById('userAvatar');
-    const menu   = document.getElementById('logoutMenu');
-    const btn    = document.getElementById('signOutBtn');
-    if (!avatar || !menu || !btn) { setTimeout(attach, 50); return; }
+// Single delegated listener — handles logout and save regardless of dynamic re-renders
+document.addEventListener('click', function(e) {
+  const avatar = e.target.closest('#userAvatar');
+  const signOutBtn = e.target.closest('#signOutBtn');
+  const saveBtn = e.target.closest('#saveBtn');
+  const menu = document.getElementById('logoutMenu');
 
-    avatar.addEventListener('click', function(e) {
-      e.stopPropagation();
-      menu.classList.toggle('open');
-    });
-
-    btn.addEventListener('click', function(e) {
-      e.stopPropagation();
-      signOut();
-    });
-
-    document.addEventListener('click', function() {
-      menu.classList.remove('open');
-    });
+  if (avatar) {
+    e.stopPropagation();
+    if (menu) menu.classList.toggle('open');
+    return;
   }
-  attach();
+  if (signOutBtn) {
+    e.stopPropagation();
+    signOut();
+    return;
+  }
+  if (saveBtn) {
+    e.stopPropagation();
+    submitForm();
+    return;
+  }
+  // Click anywhere else closes the menu
+  if (menu) menu.classList.remove('open');
 });
 
 async function init() {
@@ -1856,7 +1858,6 @@ function renderStep() {
       </div>`;
 
     document.getElementById('backBtn8').addEventListener('click', prevStep);
-    document.getElementById('saveBtn').addEventListener('click', submitForm);
   }
 }
 
