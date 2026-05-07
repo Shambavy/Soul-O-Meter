@@ -429,6 +429,7 @@ html, body {
 }
 .yn-btn.yes.active { background: var(--green-bg); border-color: var(--green); color: #2d8a5a; }
 .yn-btn.no.active  { background: var(--red-bg);   border-color: var(--red);   color: var(--red); }
+.yn-btn.maybe.active { background: #fff8e1; border-color: #f0a500; color: #b07800; }
 
 /* ─── STEP INDICATOR ─── */
 .step-indicator { display: flex; gap: 6px; justify-content: center; padding: 12px 0 4px; }
@@ -808,18 +809,14 @@ const STEP_TITLES = [
 ];
 
 const WISDOM = [
+  "One day this app will just say 'Found Him' 😌❤️",
+  "He failed the vibe check harder than my math exam 😭📉",
   "Your future husband is out there eating dinner right now with no idea you exist 💀",
   "He had potential. Keyword: 'had'.",
-  "The bar was on the floor and he still tripped over it 😭",
-  "You didn't lose him. He lost you. Big difference ❤️",
-  "Not every connection is a sign. Sometimes it's just a lesson with good hair 😂",
-  "He was a vibe check. He failed. Next 😂",
-  "Still loading... please hold. Good things take time 🌸",
-  "Somewhere your person is also tired of this and hoping it ends soon 😭❤️",
-  "He was a chapter, not the book ❤️",
-  "You're not too much. He was just not enough ❤️",
+  "Somewhere out there, your person is also swiping left on clowns 🤡❤️",
+  "Even Google Maps couldn't help him find emotional maturity 🗺️",
   "He was sent to teach you something. Lesson learned. Moving on 😌",
-  "Brought to you by another almost 😂"
+  "Still loading... please hold. Good things take time 🌸"
 ];
 
 const MILESTONES = [
@@ -839,18 +836,18 @@ const TRAITS = [
   "Is he kind and sensitive?",
   "How mature is he?",
   "Does he put in real effort?",
-  "Is he consistent - not hot and cold?",
+  "Is he consistent — not hot and cold?",
   "Does he communicate openly?",
   "How does he handle conflict?",
   "Does he own his mistakes?",
   "How empathetic is he?",
   "Is he emotionally available?",
   "Does he have a life outside work?",
-  "Physical attraction",
+  "Mutual attraction",
   "Do you connect intellectually?",
   "Can you be fully yourself with him?",
   "Does he energise you or drain you?",
-  "Is he family oriented?",
+  "Is he family-oriented?",
   "Is his financial mindset healthy?",
   "Does he balance career and life well?",
   "Do your lifestyles and routines match?",
@@ -865,20 +862,14 @@ const TRAITS = [
 
 // FIX #16: Yes/No questions tab (drinking, smoking, substances + other behaviours)
 const YN_QUESTIONS = [
-  { key: "career_goals",   label: "Does he have clear career or life goals?" },
-  { key: "boundaries",     label: "Does he respect boundaries (yours and others')?" },
-  { key: "no_aggression",  label: "Does he handle disagreements without aggression?" },
-  { key: "culture_resp",   label: "Does he respect different cultures or beliefs?" },
-  { key: "drinks",         label: "Does he drink?" },
-  { key: "smokes",         label: "Does he smoke?" },
-  { key: "substances",     label: "Does he use substances?" },
-  { key: "prays",          label: "Does he believe in God?" },
-  { key: "family_close",   label: "Is he close to his family?" },
-  { key: "wants_kids",     label: "Does he want kids?" },
-  { key: "open_comm",      label: "Does he communicate openly without stonewalling?" },
-  { key: "takes_acc",      label: "Does he take accountability for his actions?" },
-  { key: "effort",         label: "Does he put in consistent effort (not just at the start)?" },
-  { key: "laughter",       label: "Does he make you laugh?" }
+  { key: "marriage",      label: "Is he serious about marriage?" },
+  { key: "life_outside",  label: "Does he have a life outside work?" },
+  { key: "smokes",        label: "Does he smoke?" },
+  { key: "substances",    label: "Does he use substances?" },
+  { key: "drinks",        label: "Does he drink?" },
+  { key: "prays",         label: "Does he believe in God?" },
+  { key: "family_close",  label: "Is he family-oriented?" },
+  { key: "wants_kids",    label: "Does he want kids?" }
 ];
 
 const HOW_MET = ["Matrimony", "Dating App", "Family", "Friends", "Work", "Universe ✨"];
@@ -917,22 +908,20 @@ const RED_FLAGS_PRESET = [
 
 // FIX #20: Non-negotiables as yes/no checklist
 const NONNEG_ITEMS = [
-  { key: "nn1",  label: "Kind & respectful - basically a decent human being" },
-  { key: "nn2",  label: "Emotionally available - like actually available" },
-  { key: "nn3",  label: "Communicates clearly - says what he means, means what he says" },
+  { key: "nn1",  label: "Kind & respectful — basically a decent human being" },
+  { key: "nn2",  label: "Emotionally available — like actually available" },
+  { key: "nn3",  label: "Communicates clearly — says it, means it, and no stonewalling" },
   { key: "nn4",  label: "Prioritises love, family, and values" },
-  { key: "nn5",  label: "Knows what he wants from life (and is working towards it)" },
+  { key: "nn5",  label: "Knows what he wants from life (career/life goals, working towards it)" },
   { key: "nn6",  label: "Handles money and life responsibly" },
-  { key: "nn7",  label: "Shows up and stays consistently" },
-  { key: "nn8",  label: "Doesn't run from uncomfortable conversations" },
-  { key: "nn9",  label: "Mature and can take accountability" },
-  { key: "nn10", label: "Doesn't leave me confused about where I stand" },
-  { key: "nn11", label: "Values that align, not clash" },
-  { key: "nn12", label: "Treats me right without needing a manual" }
+  { key: "nn7",  label: "Consistency — shows up, no hot/cold, no confusion" },
+  { key: "nn8",  label: "Emotional maturity & accountability — handles conflict, owns mistakes" },
+  { key: "nn9",  label: "Values alignment — including respect for cultures/beliefs" },
+  { key: "nn10", label: "Doesn't run from uncomfortable conversations" }
 ];
 
 const NICETOHAVE_ITEMS = [
-  { key: "nth1", label: "A connection that flows - not forced" },
+  { key: "nth1", label: "A connection that flows, not forced" },
   { key: "nth2", label: "Feels like home" },
   { key: "nth3", label: "Brings steady love that's calm & doesn't need Tiger balm 😄" },
   { key: "nth4", label: "Finds joy in the little things" },
@@ -1660,14 +1649,15 @@ function renderStep() {
   // STEP 3: My Non-Negotiables
   else if (addStep === 3) {
     body.innerHTML = `
-      <div class="nonneg-section-title" style="font-size:14px;font-weight:900;color:var(--rose-dark);margin-bottom:8px">Must‑Haves <span style="font-weight:600;font-size:12px;color:var(--text3)">(aka bare minimum)</span></div>
+      <div class="nonneg-section-title" style="font-size:14px;font-weight:900;color:var(--rose-dark);margin-bottom:8px">Must‑Haves ✅ <span style="font-weight:600;font-size:12px;color:var(--text3)">(aka bare minimum)</span></div>
       <div class="yn-list" id="nnList">
         ${NONNEG_ITEMS.map(item => `
           <div class="yn-row">
             <div class="yn-label">${item.label}</div>
             <div class="yn-btns">
-              <button type="button" class="yn-btn yes${form.nonneg&&form.nonneg[item.key]===true?' active':''}" data-key="${item.key}" data-yn="yes">Yayy 🌸</button>
-              <button type="button" class="yn-btn no${form.nonneg&&form.nonneg[item.key]===false?' active':''}" data-key="${item.key}" data-yn="no">Nay 🌵</button>
+              <button type="button" class="yn-btn yes${form.nonneg&&form.nonneg[item.key]==='yes'?' active':''}" data-key="${item.key}" data-yn="yes">Yayy 🌸</button>
+              <button type="button" class="yn-btn no${form.nonneg&&form.nonneg[item.key]==='no'?' active':''}" data-key="${item.key}" data-yn="no">Nay 🌵</button>
+              <button type="button" class="yn-btn maybe${form.nonneg&&form.nonneg[item.key]==='maybe'?' active':''}" data-key="${item.key}" data-yn="maybe">Still Figuring 👀</button>
             </div>
           </div>`).join('')}
       </div>
@@ -1677,8 +1667,9 @@ function renderStep() {
           <div class="yn-row">
             <div class="yn-label">${item.label}</div>
             <div class="yn-btns">
-              <button type="button" class="yn-btn yes${form.nonneg&&form.nonneg[item.key]===true?' active':''}" data-key="${item.key}" data-yn="yes">Yayy 🌸</button>
-              <button type="button" class="yn-btn no${form.nonneg&&form.nonneg[item.key]===false?' active':''}" data-key="${item.key}" data-yn="no">Nay 🌵</button>
+              <button type="button" class="yn-btn yes${form.nonneg&&form.nonneg[item.key]==='yes'?' active':''}" data-key="${item.key}" data-yn="yes">Yayy 🌸</button>
+              <button type="button" class="yn-btn no${form.nonneg&&form.nonneg[item.key]==='no'?' active':''}" data-key="${item.key}" data-yn="no">Nay 🌵</button>
+              <button type="button" class="yn-btn maybe${form.nonneg&&form.nonneg[item.key]==='maybe'?' active':''}" data-key="${item.key}" data-yn="maybe">Still Figuring 👀</button>
             </div>
           </div>`).join('')}
       </div>
@@ -1690,12 +1681,12 @@ function renderStep() {
     document.querySelectorAll('#nnList .yn-btn, #nthList .yn-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         const key = btn.dataset.key;
-        const val = btn.dataset.yn === 'yes';
+        const val = btn.dataset.yn;
         if (!form.nonneg) form.nonneg = {};
         form.nonneg[key] = val;
         document.querySelectorAll(`[data-key="${key}"]`).forEach(b => {
           b.classList.remove('active');
-          if ((b.dataset.yn === 'yes' && val) || (b.dataset.yn === 'no' && !val)) b.classList.add('active');
+          if (b.dataset.yn === val) b.classList.add('active');
         });
       });
     });
