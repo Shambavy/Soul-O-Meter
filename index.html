@@ -415,12 +415,12 @@ html, body {
 /* ─── YES/NO QUESTIONS ─── */
 .yn-list { display: flex; flex-direction: column; gap: 12px; }
 .yn-row {
-  display: flex; align-items: center; gap: 10px;
+  display: flex; flex-direction: column; gap: 8px;
   background: white; border: 1px solid var(--blush);
   border-radius: var(--radius-sm); padding: 10px 14px;
 }
-.yn-label { flex: 1; font-size: 13px; font-weight: 700; color: var(--text2); line-height: 1.35; }
-.yn-btns { display: flex; gap: 6px; flex-shrink: 0; }
+.yn-label { font-size: 13px; font-weight: 700; color: var(--text2); line-height: 1.35; }
+.yn-btns { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 5px; }
 .yn-btn {
   padding: 5px 10px; border-radius: 20px; font-size: 12px; font-weight: 800;
   cursor: pointer; border: 2px solid var(--blush); background: white;
