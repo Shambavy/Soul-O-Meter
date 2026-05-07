@@ -415,12 +415,18 @@ html, body {
 /* ─── YES/NO QUESTIONS ─── */
 .yn-list { display: flex; flex-direction: column; gap: 12px; }
 .yn-row {
+  display: flex; align-items: center; gap: 10px;
+  background: white; border: 1px solid var(--blush);
+  border-radius: var(--radius-sm); padding: 10px 14px;
+}
+.yn-label { flex: 1; font-size: 13px; font-weight: 700; color: var(--text2); line-height: 1.35; }
+.yn-btns { display: flex; gap: 6px; flex-shrink: 0; }
+.nonneg-row {
   display: flex; flex-direction: column; gap: 8px;
   background: white; border: 1px solid var(--blush);
   border-radius: var(--radius-sm); padding: 10px 14px;
 }
-.yn-label { font-size: 13px; font-weight: 700; color: var(--text2); line-height: 1.35; }
-.yn-btns { display: flex; gap: 6px; flex-shrink: 0; }
+.nonneg-label { font-size: 13px; font-weight: 700; color: var(--text2); line-height: 1.35; }
 .nonneg-btns { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 5px; }
 .yn-btn {
   padding: 5px 10px; border-radius: 20px; font-size: 12px; font-weight: 800;
@@ -1186,7 +1192,7 @@ function getMilestoneProgress() {
 function renderJourney() {
   const c = document.getElementById('content');
   const { pct, label } = getMilestoneProgress();
-  const pursuing = people.filter(p => p.status === 'pursue').length;
+  const pursuing = people.filter(p => ['pursue','maybe','on-pause','the-one'].includes(p.status)).length;
   const survived = people.filter(p => ['not-him','ghosted','red-flag'].includes(p.status)).length;
 
   const scored = people.filter(p => p.traits && p.traits.some(t => t > 0));
@@ -1690,8 +1696,8 @@ function renderStep() {
       <div class="nonneg-section-title" style="font-size:14px;font-weight:900;color:var(--rose-dark);margin-bottom:8px">Must‑Haves ✅ <span style="font-weight:600;font-size:12px;color:var(--text3)">(aka bare minimum)</span></div>
       <div class="yn-list" id="nnList">
         ${NONNEG_ITEMS.map(item => `
-          <div class="yn-row">
-            <div class="yn-label">${item.label}</div>
+          <div class="nonneg-row">
+            <div class="nonneg-label">${item.label}</div>
             <div class="nonneg-btns">
               <button type="button" class="yn-btn yes${form.nonneg&&form.nonneg[item.key]==='yes'?' active':''}" data-key="${item.key}" data-yn="yes">Yayy 🌸</button>
               <button type="button" class="yn-btn no${form.nonneg&&form.nonneg[item.key]==='no'?' active':''}" data-key="${item.key}" data-yn="no">Nay 🌵</button>
@@ -1702,8 +1708,8 @@ function renderStep() {
       <div class="nonneg-section-title" style="font-size:14px;font-weight:900;color:var(--rose-dark);margin:16px 0 8px">Nice‑to‑Haves ✨ <span style="font-weight:600;font-size:12px;color:var(--text3)">(aka brownie points)</span></div>
       <div class="yn-list" id="nthList">
         ${NICETOHAVE_ITEMS.map(item => `
-          <div class="yn-row">
-            <div class="yn-label">${item.label}</div>
+          <div class="nonneg-row">
+            <div class="nonneg-label">${item.label}</div>
             <div class="nonneg-btns">
               <button type="button" class="yn-btn yes${form.nonneg&&form.nonneg[item.key]==='yes'?' active':''}" data-key="${item.key}" data-yn="yes">Yayy 🌸</button>
               <button type="button" class="yn-btn no${form.nonneg&&form.nonneg[item.key]==='no'?' active':''}" data-key="${item.key}" data-yn="no">Nay 🌵</button>
