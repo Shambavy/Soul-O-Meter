@@ -420,7 +420,8 @@ html, body {
   border-radius: var(--radius-sm); padding: 10px 14px;
 }
 .yn-label { font-size: 13px; font-weight: 700; color: var(--text2); line-height: 1.35; }
-.yn-btns { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 5px; }
+.yn-btns { display: flex; gap: 6px; flex-shrink: 0; }
+.nonneg-btns { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 5px; }
 .yn-btn {
   padding: 5px 10px; border-radius: 20px; font-size: 12px; font-weight: 800;
   cursor: pointer; border: 2px solid var(--blush); background: white;
@@ -1135,12 +1136,49 @@ function renderCurrentTab() {
 }
 
 // ─── JOURNEY ───
+function scorePersonQuality(p) {
+  // 1. Non-Negotiables (40 pts) — 10 items x 4pts each
+  let nnScore = 0;
+  const nnKeys = ['nn1','nn2','nn3','nn4','nn5','nn6','nn7','nn8','nn9','nn10'];
+  nnKeys.forEach(k => {
+    const v = p.nonneg && p.nonneg[k];
+    if (v === 'yes' || v === true) nnScore += 4;
+    else if (v === 'maybe') nnScore += 2;
+  });
+
+  // 2. What You Feel (40 pts) — 25 traits, each rated 0-5, normalised to 40
+  let traitScore = 0;
+  if (p.traits && p.traits.length) {
+    const traitTotal = p.traits.reduce((a, b) => a + (b || 0), 0);
+    const traitMax = p.traits.length * 5;
+    traitScore = traitMax > 0 ? (traitTotal / traitMax) * 40 : 0;
+  }
+
+  // 3. Status (20 pts)
+  const statusMap = { 'the-one': 20, 'pursue': 20, 'maybe': 10, 'on-pause': 5, 'not-him': 0, 'ghosted': 0, 'red-flag': 0 };
+  const statusScore = statusMap[p.status] || 0;
+
+  // 4. Nice-to-Have bonus (up to 10 pts) — 6 items
+  let nthScore = 0;
+  const nthKeys = ['nth1','nth2','nth3','nth4','nth5','nth6'];
+  nthKeys.forEach(k => {
+    const v = p.nonneg && p.nonneg[k];
+    if (v === 'yes' || v === true) nthScore += 10/6;
+    else if (v === 'maybe') nthScore += 5/6;
+  });
+
+  // Total out of 110, normalised to 100
+  const raw = nnScore + traitScore + statusScore + Math.min(10, nthScore);
+  return Math.min(100, Math.round((raw / 110) * 100));
+}
+
 function getMilestoneProgress() {
-  const pursuing = people.filter(p => p.status === 'pursue').length;
   const theOne = people.some(p => p.status === 'the-one');
   if (theOne) return { pct: 100, label: MILESTONES[6].label };
   if (people.length === 0) return { pct: 0, label: MILESTONES[0].label };
-  const pct = Math.min(99, Math.round((pursuing / Math.max(people.length, 1)) * 100));
+  // Best quality score across all logged people
+  const bestScore = Math.max(...people.map(p => scorePersonQuality(p)));
+  const pct = Math.min(99, bestScore);
   const m = MILESTONES.find(m => pct >= m.min && pct <= m.max) || MILESTONES[1];
   return { pct, label: m.label };
 }
@@ -1654,7 +1692,7 @@ function renderStep() {
         ${NONNEG_ITEMS.map(item => `
           <div class="yn-row">
             <div class="yn-label">${item.label}</div>
-            <div class="yn-btns">
+            <div class="nonneg-btns">
               <button type="button" class="yn-btn yes${form.nonneg&&form.nonneg[item.key]==='yes'?' active':''}" data-key="${item.key}" data-yn="yes">Yayy 🌸</button>
               <button type="button" class="yn-btn no${form.nonneg&&form.nonneg[item.key]==='no'?' active':''}" data-key="${item.key}" data-yn="no">Nay 🌵</button>
               <button type="button" class="yn-btn maybe${form.nonneg&&form.nonneg[item.key]==='maybe'?' active':''}" data-key="${item.key}" data-yn="maybe">Still Figuring 👀</button>
@@ -1666,7 +1704,7 @@ function renderStep() {
         ${NICETOHAVE_ITEMS.map(item => `
           <div class="yn-row">
             <div class="yn-label">${item.label}</div>
-            <div class="yn-btns">
+            <div class="nonneg-btns">
               <button type="button" class="yn-btn yes${form.nonneg&&form.nonneg[item.key]==='yes'?' active':''}" data-key="${item.key}" data-yn="yes">Yayy 🌸</button>
               <button type="button" class="yn-btn no${form.nonneg&&form.nonneg[item.key]==='no'?' active':''}" data-key="${item.key}" data-yn="no">Nay 🌵</button>
               <button type="button" class="yn-btn maybe${form.nonneg&&form.nonneg[item.key]==='maybe'?' active':''}" data-key="${item.key}" data-yn="maybe">Still Figuring 👀</button>
